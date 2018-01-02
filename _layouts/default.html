@@ -7,10 +7,7 @@
     <div class="container content">
       <header class="masthead">
         <h1 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-          <a class="masthead-ellipses" href="#" title="Menu">
-            <span>...</span>
-          </a>
+          <a id="masthead-ellipses" href="#">{{ site.title }}</a>
         </h1>
         <nav id="masthead-nav" class="masthead-nav">
           <ul>
@@ -18,7 +15,6 @@
             <li><a href="{{ site.baseurl }}/disclaimer" title="Disclaimer">disclaimer</a></li>
           </ul>
         </nav>
-        <!--<div class="masthead-fade">&nbsp;</div>-->
       </header>
 
       <main>
@@ -34,7 +30,7 @@
     <script>
       // Nav menu slider.
       $(document).ready(function() {
-        $(".masthead-ellipses").click(function() {
+        $("#masthead-ellipses").click(function() {
           $(this).parent()
                  .parent()
                  .children("#masthead-nav")

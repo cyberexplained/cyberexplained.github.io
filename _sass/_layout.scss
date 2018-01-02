@@ -1,8 +1,8 @@
 .container {
-  max-width: 50rem;
-  padding-top: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: $max-width;
+  padding-top: 4em;
+  padding-left: $edge-padding;
+  padding-right: $edge-padding;
   margin-left: auto;
   margin-right: auto;
 
@@ -19,8 +19,8 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 1em;
-    padding-left: 2em;
-    max-width: 50rem;
+    padding-left: $edge-padding;
+    max-width: $max-width;
     height: 4em;
     background: #000;
     color: #fff;

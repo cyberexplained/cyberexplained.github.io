@@ -3,7 +3,7 @@
   margin: 0 -1.5rem 1rem;
   color: #ccc;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1.25em;
 }
 
 // Pagination items can be `span`s or `a`s
@@ -14,7 +14,7 @@
 
 @media (min-width: 30em) {
   .pagination {
-    margin: 3rem 0;
+    margin: 1.5rem 0;
   }
 
   .pagination-item {
