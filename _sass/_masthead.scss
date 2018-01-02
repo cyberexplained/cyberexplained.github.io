@@ -22,6 +22,7 @@
   padding-left: $edge-padding;
   color: $text-color;
   display: inline-block;
+  background: #fff;
 
   a {
     color: inherit;
@@ -62,7 +63,6 @@
   float: right;
   margin: 0;
   padding: 0;
-  padding-bottom: 0.3em;
   padding-right: 2.5em;
   background: #fff;
   width: 100%;
