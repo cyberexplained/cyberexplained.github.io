@@ -1,0 +1,128 @@
+// Posts and pages
+//
+// Each post is wrapped in `.post` and is used on default and post layouts. Each
+// page is wrapped in `.page` and is only used on the page layout.
+
+.page,
+.post {
+  margin-bottom: 1.75em;
+  font-size: .85em;
+//  background: yellow;
+
+  .post-heading {
+    font-weight: 500;
+  }
+
+  .post-extract {
+//    background: coral;
+  }
+
+  .post-content {
+    font-weight: 200;
+    padding-top: .5em;
+    padding-bottom: 0;
+    display: none;
+//    margin-bottom: -1em;
+//    background: pink;
+
+    p { // Posts will be wrapped in <p> by default which will add padding/margin so clear.
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .post-footer {
+    color: $green;
+//    padding-top: .75em;
+//    padding-bottom: 0;
+//    margin-bottom: 0;
+//    background: red;
+    padding-top: .3em;
+    padding-bottom: .3em;
+//    border-bottom: 1px solid $green;
+
+    time {
+      font-size: .85em;
+      font-weight: 400;
+    }
+  }
+
+  .post-ellipses {
+    font-size: 1em;
+    font-weight: 900;
+//    background: orange;
+    text-decoration: none;
+    color: $green;
+  }
+
+  div {
+    display: block;
+//    padding-top: 1em;
+//    padding-bottom: .5em;
+  }
+
+  li + li {
+    margin-top: .25rem;
+  }
+}
+
+// Blog post or page title
+.page-title,
+.post-title,
+.post-title a {
+  color: $gray-5;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+// Meta data line below post title
+/*
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: $text-color;
+  font-size: 1em;
+  font-weight: $weight-light;
+}
+*/
+
+// Related posts
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    small {
+      font-size: 75%;
+      color: #999;
+    }
+
+    a:hover {
+      color: #268bd2;
+      text-decoration: none;
+
+      small {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.warn {
+  color: #ff3333;
+}

@@ -1,0 +1,33 @@
+---
+layout:       default
+title:        Home
+---
+<div class="posts">
+{% for post in paginator.posts %}
+  <article class="post">
+    <div class="post-extract">
+      <span class="post-heading">
+        {{ post.heading }}
+      </span>
+      {{ post.extract }}
+    </div>
+    <div id="post-content" class="post-content">
+      {{ post.content }}
+    </div>
+    <div class="post-footer">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+      <a id="post-ellipses" class="post-ellipses" href="#">&nbsp;&nbsp;...&nbsp;&nbsp;</a>
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">older</a>
+  {% endif %}
+  &nbsp;&nbsp;&nbsp;
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">newer</a>
+  {% endif %}
+</div>
