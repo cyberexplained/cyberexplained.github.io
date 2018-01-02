@@ -8,19 +8,22 @@
       <header class="masthead">
         <h1 class="masthead-title">
           <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+          <a class="masthead-ellipses" href="#" title="Menu">
+            <span>...</span>
+          </a>
         </h1>
-        <div class="masthead-fade">&nbsp;</div>
+        <nav id="masthead-nav" class="masthead-nav">
+          <ul>
+            <li><a href="{{ site.baseurl }}/" title="Home">home</a></li>
+            <li><a href="{{ site.baseurl }}/disclaimer" title="Disclaimer">disclaimer</a></li>
+          </ul>
+        </nav>
+        <!--<div class="masthead-fade">&nbsp;</div>-->
       </header>
 
       <main>
         {{ content }}
       </main>
-
-      <footer class="footer">
-        <small>
-          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-        </small>
-      </footer>
     </div>
 
     <script
@@ -29,9 +32,26 @@
       crossorigin="anonymous"></script>
 
     <script>
-      $(document).ready(function(){
-        $(".tag-link").click(function(){
-          $(this).parent().children("#tag-posts").slideToggle("fast");
+      // Nav menu slider.
+      $(document).ready(function() {
+        $(".masthead-ellipses").click(function() {
+          $(this).parent()
+                 .parent()
+                 .children("#masthead-nav")
+                 .slideToggle("fast");
+          return false;
+        });
+      });
+    </script>
+
+    <script>
+      // Post content slider.
+      $(document).ready(function() {
+        $(".post-ellipses").click(function() {
+          $(this).parent()
+                 .parent()
+                 .children("#post-content")
+                 .slideToggle("fast");
           return false;
         });
       });
@@ -47,5 +67,11 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
+
+    <div class="footer-container">
+      <footer class="footer">
+        <span class="copyright">&copy; Cyber Explained&nbsp;<time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.&nbsp;All Rights Reserved.</span>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,25 +1,15 @@
-// Masthead
-//
-// Super small header above the content for site name and short description.
-
 .masthead {
-//  padding-top: .3rem;
-//  padding-bottom: 0rem;
-//  margin-bottom: .3rem;
   position: fixed;
   left: 0;
   top: 0;
   height: 3em;
   width: 100%;
-//  background: green;
-//  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 
   h1 {
     text-align: center;
     padding-top: .5em;
     padding-bottom: .5em;
     width: 100%;
-//    background: orange;
     font-size: 1.25em;
     font-weight: 300;
   }
@@ -28,6 +18,7 @@
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 3em;
   color: $text-color;
   display: inline-block;
   background: #fff;
@@ -45,6 +36,37 @@
   small {
     font-size: 75%;
     font-weight: $weight-light;
+  }
+}
+
+.masthead-ellipses {
+  float: right;
+  padding-right: 2em;
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    color: $green;
+    font-size: 1em;
+    font-weight: 900;
+  }
+}
+
+.masthead-nav {
+  display: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.3em;
+  padding-right: 2.5em;
+  background: #fff;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    text-align: right;
   }
 }
 

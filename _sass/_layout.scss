@@ -1,7 +1,3 @@
-// Layout
-//
-// Styles for managing the structural hierarchy of the site.
-
 .container {
   max-width: 50rem;
   padding-top: 4rem;
@@ -15,16 +11,22 @@
   flex-grow: 1;
 }
 
-footer {
-//  margin-top: 2rem;
-  margin-left: -2em;;
-//  margin-bottom: 2rem;
-  margin-right: -2em;
+.footer-container {
+  min-width: 100%;
+  background: #000;
 
-  /* footer specific */
-//  position: absolute;
-  height: 60px;
-//  bottom: 0;
-//  left: 0;
-  background: yellow;
+  footer {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    padding-left: 2em;
+    max-width: 50rem;
+    height: 4em;
+    background: #000;
+    color: #fff;
+
+    .copyright {
+      font-size: .5em;
+    }
+  }
 }

@@ -5,11 +5,10 @@ permalink:          pretty
 title:              cyber explained
 tagline:            cyberexplained.github.io
 url:                https://cyberexplained.github.io
-paginate:           25
+paginate:           8
 
 # Navigation
 pages_list:
-  Tags:             '/tags'
   Disclaimer:       '/disclaimer'
 
 # Assets
