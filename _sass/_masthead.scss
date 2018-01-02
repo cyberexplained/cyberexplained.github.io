@@ -59,16 +59,17 @@
 }
 
 .masthead-nav {
+  max-width: $max-width;
   display: none;
-  float: right;
   margin: 0;
   padding: 0;
-  padding-right: 2.5em;
+  padding-right: $edge-padding;
   background: #fff;
   width: 100%;
 
   ul {
     list-style: none;
     text-align: right;
+    line-height: 1.25em;
   }
 }
