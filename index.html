@@ -6,9 +6,9 @@ title:        Home
 {% for post in paginator.posts %}
   <article class="post">
     <div class="post-extract">
-      <span class="post-heading">
+      <a href="{{ post.url | absolute_url }}" class="post-heading">
         {{ post.heading }}
-      </span>
+      </a>
       {{ post.extract }}
     </div>
     <div id="post-content" class="post-content">

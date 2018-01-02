@@ -1,20 +1,13 @@
-// Posts and pages
-//
-// Each post is wrapped in `.post` and is used on default and post layouts. Each
-// page is wrapped in `.page` and is only used on the page layout.
-
 .page,
 .post {
   margin-bottom: 1.75em;
   font-size: .85em;
-//  background: yellow;
 
   .post-heading {
     font-weight: 500;
   }
 
   .post-extract {
-//    background: coral;
   }
 
   .post-content {
@@ -22,24 +15,19 @@
     padding-top: .5em;
     padding-bottom: 0;
     display: none;
-//    margin-bottom: -1em;
-//    background: pink;
 
-    p { // Posts will be wrapped in <p> by default which will add padding/margin so clear.
+    // Posts will be wrapped in <p> by default which will add padding/margin so clear.
+    p {
       margin: 0;
       padding: 0;
+      padding-bottom: .85em;
     }
   }
 
   .post-footer {
     color: $green;
-//    padding-top: .75em;
-//    padding-bottom: 0;
-//    margin-bottom: 0;
-//    background: red;
     padding-top: .3em;
     padding-bottom: .3em;
-//    border-bottom: 1px solid $green;
 
     time {
       font-size: .85em;
@@ -50,15 +38,12 @@
   .post-ellipses {
     font-size: 1em;
     font-weight: 900;
-//    background: orange;
     text-decoration: none;
     color: $green;
   }
 
   div {
     display: block;
-//    padding-top: 1em;
-//    padding-bottom: .5em;
   }
 
   li + li {
@@ -78,16 +63,14 @@
 }
 
 // Meta data line below post title
-/*
 .post-date {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: $text-color;
+  color: $green;
   font-size: 1em;
   font-weight: $weight-light;
 }
-*/
 
 // Related posts
 .related {
@@ -121,8 +104,4 @@
       }
     }
   }
-}
-
-.warn {
-  color: #ff3333;
 }
