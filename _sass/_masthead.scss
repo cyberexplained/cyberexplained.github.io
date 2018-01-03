@@ -22,7 +22,7 @@
   padding-left: $edge-padding;
   color: $text-color;
   display: inline-block;
-  background: #fff;
+  background: $body-bg;
 
   a {
     color: inherit;
@@ -64,12 +64,13 @@
   margin: 0;
   padding: 0;
   padding-right: $edge-padding;
-  background: #fff;
+  background: $body-bg;
   width: 100%;
 
   ul {
     list-style: none;
     text-align: right;
     line-height: 1.25em;
+    padding-right: .3em;
   }
 }

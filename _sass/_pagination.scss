@@ -12,18 +12,18 @@
   color: $green;
 }
 
+.disabled {
+  color: $green-faded;
+}
+
 @media (min-width: 30em) {
   .pagination {
     margin: 1.5rem 0;
   }
 
   .pagination-item {
-    font-size: .85em;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 200;
     text-decoration: none;
-  }
-
-  .disabled {
-    opacity: .4;
   }
 }

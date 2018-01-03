@@ -22,8 +22,8 @@
     padding-left: $edge-padding;
     max-width: $max-width;
     height: 4em;
-    background: #000;
-    color: #fff;
+    background: $text-color;
+    color: $body-bg;
 
     .copyright {
       font-size: .5em;
