@@ -22,6 +22,12 @@
       font-size: .55em;
     }
   }
+
+  @media handheld {
+    h1 {
+      background: green;
+    }
+  }
 }
 
 .masthead-title {
