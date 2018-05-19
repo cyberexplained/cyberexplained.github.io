@@ -1,3 +1,31 @@
+// nav[role="select"] {
+//   > select {
+//     display: none;
+//   }
+// }
+
+/*
+@media screen and (max-width: 44em) {
+  // nav[role="select"] {
+  //   ul {
+  //     display: none;
+  //   }
+
+  //   // select {
+  //   //   width: 100%;
+  //   //   display: block;
+  //   // }
+
+  //   &:after {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     content: "menu";
+
+  //   }
+  // }
+}*/
+
 .masthead {
   position: fixed;
   left: 0;
@@ -5,8 +33,10 @@
   width: 100%;
   background: $body-bg;
 
-  display: block;
-  margin-bottom: 3em;
+  border-bottom: .5px solid black;
+
+//  display: block;
+//  margin-bottom: 3em;
 
   h1 {
     width: inherit;
@@ -40,6 +70,7 @@
   }
 }
 
+/*
 .masthead-nav {
   display: flex;
   flex-direction: column;
@@ -78,4 +109,4 @@
       flex-direction: row;
     }
   }
-}
+}*/

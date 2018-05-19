@@ -10,13 +10,13 @@
           <!-- <a id="masthead-ellipses" href="{{ site.baseurl }}">{{ site.title }}</a> -->
           <a href="{{ site.baseurl }}">{{ site.title }}</a>
         </h1>
-        <nav class="masthead-nav">
+        <!-- <nav role="select" class="masthead-nav">
           <ul id="nav" class="masthead-nav">
             <li><a href="{{ site.baseurl }}/" title="Home">home</a></li>
             <li><a href="{{ site.baseurl }}/disclaimer" title="Disclaimer">disclaimer</a></li>
             <li><a href="{{ site.baseurl }}/" title="Cyber101">cyber 101</a></li>
           </ul>
-        </nav>
+        </nav> -->
       </header>
 
       <main>
@@ -68,11 +68,22 @@
 
     <div class="footer-container">
       <footer class="footer">
-        <!-- <span class="copyright">&copy; Cyber Explained&nbsp;<time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.&nbsp;All Rights Reserved.</span> -->
-        <div class="copyright">
-          <div>&copy; Cyber Explained,&nbsp;<time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.</div>
-          <div>All Rights Reserved.</div>
+        <div class="left-panel">
+          <div class="copyright">
+            <ul>
+              <li>&copy; CyberExplained 2018</li>
+              <li>All rights reserved</li>
+            </ul>
+          </div>
         </div>
+        <div class="right-panel">
+          <ul>
+            <li><a href="#" class="footer-link">Privacy and Cookies</a></li>
+            <li><a href="#" class="footer-link">Terms of Use</a></li>
+            <li><a href="#" class="footer-link">Disclaimer</a></li>
+          </ul>
+        </div>
+        <br style="clear: both;" />
       </footer>
     </div>
   </body>
