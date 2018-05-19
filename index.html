@@ -5,33 +5,35 @@ title:        Home
 <div class="posts">
 {% for post in paginator.posts %}
   <article class="post">
+    <div class="post-heading">
+      <h2>
+          <a href="{{ post.url | absolute_url }}" class="post-heading">
+            {{ post.heading }}
+          </a>
+        </h2>
+    </div>  
     <div class="post-extract">
-      <a href="{{ post.url | absolute_url }}" class="post-heading">
-        {{ post.heading }}
-      </a>
       {{ post.extract }}
-    </div>
-    <div id="post-content" class="post-content">
-      {{ post.content }}
     </div>
     <div class="post-footer">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-      <a class="post-ellipses" href="#">&nbsp;&nbsp;...&nbsp;&nbsp;</a>
+      <span>&nbsp;</span>
+      <a href="{{ post.url | absolute_url }}">READ MORE</a>  <!-- class="post-continue-reading" -->
     </div>
   </article>
 {% endfor %}
 </div>
 
-<div class="pagination">
+<!-- <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item" href="{{ paginator.next_page_path | prepend: site.baseurl }}">older</a>
+    <a class="pagination-item" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
   {% else %}
-    <span class="pagination-item disabled">older</span>
+    <span class="pagination-item disabled">Older</span>
   {% endif %}
   &nbsp;
   {% if paginator.previous_page %}
-    <a class="pagination-item" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">newer</a>
+    <a class="pagination-item" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
   {% else %}
-    <span class="pagination-item disabled">newer</span>
+    <span class="pagination-item disabled">Newer</span>
   {% endif %}
-</div>
+</div> -->

@@ -1,45 +1,57 @@
 .page,
 .post {
   margin-bottom: 1.75em;
-  font-size: .85em;
+
+//  font-family: 'Montserrat', sans-serif;
+//  font-size: .85em;
+
+  // background-color: red;
+  // color: green;
 
   .post-heading {
-    font-weight: 500;
+//    font-weight: 500;
   }
 
   .post-extract {
+    font-size: 0.5em;
   }
 
-  .post-content {
-    font-weight: 200;
-    padding-top: .5em;
-    padding-bottom: 0;
-    display: none;
+  // .post-content {
+  //   background-color: purple;
+  // //   font-family: $post-content-font-family;
+  //   font-weight: 200;
+  //   padding-top: .5em;
+  //   padding-bottom: 0;
+  //   display: none;
 
-    // Posts will be wrapped in <p> by default which will add padding/margin so clear.
-    p {
-      margin: 0;
-      padding: 0;
-      padding-bottom: .85em;
-    }
-  }
+  //   // Posts will be wrapped in <p> by default which will add padding/margin so clear.
+  //   p {
+  //     color: white;
+  //     margin: 100;
+  //     padding: 100;
+  //     padding-bottom: .85em;
+  //   }
+  //}
 
   .post-footer {
-    color: $green;
-    padding-top: .3em;
-    padding-bottom: .3em;
+    font-size: 0.5em;
 
-    time {
-      font-size: .85em;
-      font-weight: 400;
-    }
+    // color: $green;
+    margin-top: 1.5em;
+    //padding-top: 1em;
+    // padding-bottom: .3em;
+
+    // Post date line.
+    // time {
+    //   font-size: .65em;
+    //   font-weight: 400;
+    // }
   }
 
-  .post-ellipses {
-    font-size: 1em;
-    font-weight: 900;
-    text-decoration: none;
-    color: $green;
+  .post-continue-reading {
+    font-size: 0.65em;
+    font-weight: 400;
+//    text-decoration: none;
   }
 
   div {
@@ -49,6 +61,16 @@
   li + li {
     margin-top: .25rem;
   }
+
+  // // Link hover.
+  // a:hover {
+  //   color: #268bd2;
+  //   text-decoration: none;
+
+  //   small {
+  //     color: inherit;
+  //   }
+  // }
 }
 
 // Blog post or page title
@@ -62,17 +84,7 @@
   margin-top: 0;
 }
 
-// Meta data line below post title
-.post-date {
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: $green;
-  font-size: 1em;
-  font-weight: $weight-light;
-}
-
-// Related posts
+// Related posts.
 .related {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -93,15 +105,6 @@
     small {
       font-size: 75%;
       color: #999;
-    }
-
-    a:hover {
-      color: #268bd2;
-      text-decoration: none;
-
-      small {
-        color: inherit;
-      }
     }
   }
 }

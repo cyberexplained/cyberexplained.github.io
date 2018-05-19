@@ -11,17 +11,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.65em;
+//  font-family: $h1-font-family;
+  font-size: 0.65em;
 }
 
 h2 {
+//  font-family: $h2-font-family;
+  font-size: 0.55em;
+
   margin-top: 1em;
-  font-size: 1.55em;
 }
 
 h3 {
+//  font-family: $h3-font-family;
+  font-size: 0.45em;
+
   margin-top: 1em;
-  font-size: 1.45em;
 }
 
 h4, h5, h6 {

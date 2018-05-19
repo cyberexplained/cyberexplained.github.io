@@ -2,10 +2,10 @@
 permalink:          pretty
 
 # Setup
-title:              cyber explained
+title:              CYBEREXPLAINED
 tagline:            cyberexplained.github.io
 url:                https://cyberexplained.github.io
-paginate:           8
+paginate:           1000000000000
 
 # Navigation
 pages_list:
