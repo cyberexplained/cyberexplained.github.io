@@ -7,16 +7,17 @@
   border-bottom: .5px solid black;
 
   h1 {
-    -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
 
     padding-top: 1em;
     padding-bottom: 1em;
     font-weight: 300;
   }
 
-  @media screen and (max-width: 30em) {
+  @media screen and (max-width: 40em) {
     h1 {
       font-size: .55em;
     }
