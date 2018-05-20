@@ -8,8 +8,8 @@ url:                https://cyberexplained.github.io
 paginate:           1000000000000
 
 # Navigation
-pages_list:
-  Disclaimer:       '/disclaimer'
+#pages_list:
+#  Disclaimer:       '/disclaimer'
 
 # Assets
 #

@@ -7,41 +7,12 @@
     <div class="container content">
       <header class="masthead">
         <h1 class="masthead-title">CYBER EXPLAINED</h1>
-        <!-- <span class="masthead-title">CYBEREXPLAINED</span> -->
       </header>
 
       <main>
         {{ content }}
       </main>
     </div>
-
-
-
-    <!-- <script>
-      // Nav menu slider.
-      $(document).ready(function() {
-        $("#masthead-ellipses").click(function() {
-          $(this).parent()
-                 .parent()
-                 .children("#masthead-nav")
-                 .slideToggle("fast");
-          return false;
-        });
-      });
-    </script> -->
-
-    <!-- <script>
-      // Post content slider.
-      $(document).ready(function() {
-        $(".post-ellipses").click(function() {
-          $(this).parent()
-                 .parent()
-                 .children("#post-content")
-                 .slideToggle("fast");
-          return false;
-        });
-      });
-    </script> -->
 
     {% if site.analytics_id %}
     <script>
@@ -65,10 +36,10 @@
         </div>
         <div class="right-panel footer-buttons">
           <ul>
-            <li><a href="#" class="footer-link">PRIVACY AND COOKIES</a></li>
-            <li><a href="#" class="footer-link">TERMS OF USE</a></li>
-            <li><a href="#" class="footer-link">DISCLAIMER</a></li>
-            <li><a href="#" class="footer-link">CONTACT</a></li>
+            <li><a href="{{ site.url }}/privacy-and-cookies-policy.html" class="footer-link">PRIVACY AND COOKIES</a></li>
+            <li><a href="{{ site.url }}/terms-of-use.html" class="footer-link">TERMS OF USE</a></li>
+            <li><a href="{{ site.url }}/disclaimer.html" class="footer-link">DISCLAIMER</a></li>
+            <li><a href="{{ site.url }}/contact.html" class="footer-link">CONTACT</a></li>
           </ul>
         </div>
         <br style="clear: both;" />
@@ -79,17 +50,6 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-
-    <script>
-      // $(document).ready(sizeContent);
-      // $(window).resize(sizeContent);
-
-      // function sizeContent() {
-      //   var newHeight = $("html").height() + "px";
-      //   $("header").css("height", newHeight);
-      //   //$("main").css("top", newHeight);
-      // };
-    </script>
 
     <script>
       $(window).scroll(function() {
