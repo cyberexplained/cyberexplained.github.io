@@ -4,7 +4,9 @@
   top: 0;
   width: 100%;
   background: $body-bg;
-  border-bottom: .5px solid black;
+  //border-bottom: .5px solid black;
+  border-bottom: 2px solid $red;
+  z-index: 1;
 
   h1 {
     -webkit-transition: all .3s ease-in-out;
@@ -29,4 +31,22 @@
   color: $text-color;
   display: inline-block;
   text-align: center;
+}
+
+.header-hidden-on-scroll {
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+
+  // .masthead-title {
+  //   display: none;
+  // }
+}
+
+.header-visible-on-scroll {
+  transition: opacity .3s ease-in-out;
+  opacity: 1;
+
+  // .masthead-title {
+  //   display: none;
+  // }
 }

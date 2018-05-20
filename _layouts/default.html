@@ -62,12 +62,12 @@
             </ul>
           </div>
         </div>
-        <div class="right-panel">
-          <ul class="footer-buttons">
-            <li><a href="#" class="footer-link">Privacy and Cookies</a></li>
-            <li><a href="#" class="footer-link">Terms of Use</a></li>
-            <li><a href="#" class="footer-link">Disclaimer</a></li>
-            <li><a href="#" class="footer-link">Contact</a></li>
+        <div class="right-panel footer-buttons">
+          <ul>
+            <li><a href="#" class="footer-link">PRIVACY AND COOKIES</a></li>
+            <li><a href="#" class="footer-link">TERMS OF USE</a></li>
+            <li><a href="#" class="footer-link">DISCLAIMER</a></li>
+            <li><a href="#" class="footer-link">CONTACT</a></li>
           </ul>
         </div>
         <br style="clear: both;" />
@@ -80,15 +80,26 @@
     crossorigin="anonymous"></script>
 
     <script>
-      // $(document).ready(function() {
-      //   $(document).on("scroll", function(){
-      //     if($(document).scrollTop() > 100) {
-      //       $("header").addClass("masthead-shrink");
-      //     } else {
-      //       $("header").removeClass("masthead-shrink");
-      //     }
-      //   });
-      // });
+      // $(document).ready(sizeContent);
+      // $(window).resize(sizeContent);
+
+      // function sizeContent() {
+      //   var newHeight = $("html").height() + "px";
+      //   $("header").css("height", newHeight);
+      //   //$("main").css("top", newHeight);
+      // };
+    </script>
+
+    <script>
+      $(window).scroll(function() {
+        if($(window).scrollTop() > 10) {
+          $("header").removeClass("header-visible-on-scroll");
+          $("header").addClass("header-hidden-on-scroll");
+        } else {
+          $("header").addClass("header-visible-on-scroll");
+          $("header").removeClass("header-hidden-on-scroll");
+        }
+      });
     </script>
   </body>
 </html>

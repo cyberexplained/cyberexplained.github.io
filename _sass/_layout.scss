@@ -54,12 +54,22 @@
     }
 
     .footer-buttons {
-      // margin: 10px;
-      // background: blue;
+      ul li {
+        margin: 0;
+        margin-bottom: .45em;
+        padding: .42em;
+        padding-left: .85em;
+        background: $red;
+        border: 2px solid $red;
+        border-radius: 4px;
+      }
 
-      // ul {
-      //   background: orange;
-      // }
+      ul a {
+        font-size: .85em;
+        font-weight: $weight-heavy;
+        color: white;
+        opacity: .85;
+      }
     }
 
     // Footer copyright.
