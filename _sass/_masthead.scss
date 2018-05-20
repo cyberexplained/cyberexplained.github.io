@@ -9,7 +9,6 @@
   h1 {
     -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
-         -o-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
 
     padding-top: 1em;
@@ -20,12 +19,6 @@
   @media screen and (max-width: 44em) {
     h1 {
       font-size: .55em;
-    }
-  }
-
-  @media handheld {
-    h1 {
-      background: green;
     }
   }
 }

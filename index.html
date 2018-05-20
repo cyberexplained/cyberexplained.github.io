@@ -5,7 +5,7 @@ title:        Home
 <div class="posts">
 {% for post in paginator.posts %}
   <article class="post">
-    <div class="post-heading">
+    <!-- <div class="post-heading">
       <h2>
           <a href="{{ post.url | absolute_url }}" class="post-heading">
             {{ post.heading }}
@@ -18,8 +18,8 @@ title:        Home
     <div class="post-footer">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
       <span>&nbsp;</span>
-      <a href="{{ post.url | absolute_url }}">READ MORE</a>  <!-- class="post-continue-reading" -->
-    </div>
+      <a href="{{ post.url | absolute_url }}">READ MORE</a>
+    </div> -->
   </article>
 {% endfor %}
 </div>

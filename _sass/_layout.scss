@@ -21,21 +21,36 @@
   padding-bottom: 1.5em;
   padding-left: $edge-padding;
   padding-right: $edge-padding;
-  display: block;
 
   footer {
     width: 100%;
     margin: 0 auto;
-    font-size: .45em;    
+    font-size: .45em;
+
+    display: flex;
+    flex-direction: row;
 
     .left-panel {
       float: left;
-      width: 60%;
+      width: 50%;
+
+      background: pink;
     }
 
     .right-panel {
       float: left;
-      width: 40%;
+      width: 50%;
+
+      background: palegreen;
+    }
+
+    .footer-buttons {
+      // margin: 10px;
+      // background: blue;
+
+      ul {
+        background: orange;
+      }
     }
 
     // Footer copyright.
@@ -48,5 +63,82 @@
       margin: 0;
       padding: 0;
     }
+
+    // Convert footer panels to column for smaller screens.
+    @media screen and (max-width: 35em) {
+      flex-direction: column;
+      
+      
+
+      .left-panel {
+        -webkit-transition: margin-bottom .3s ease-in-out;
+           -moz-transition: margin-bottom .3s ease-in-out;
+                transition: margin-bottom .3s ease-in-out;
+        
+        width: 100%;
+        margin-bottom: .45em;
+      }
+
+      .right-panel {
+        width: 100%;
+      }
+    } 
   }
 }
+
+// .footer-container {
+//   width: 100%;
+//   max-width: $max-width;
+//   line-height: 1.5;
+//   font-weight: $weight-light;
+//   margin: 0 auto;
+//   padding-top: .5em;
+//   padding-bottom: 1.5em;
+//   padding-left: $edge-padding;
+//   padding-right: $edge-padding;
+//   display: block;
+
+//   footer {
+//     width: 100%;
+//     margin: 0 auto;
+//     font-size: .45em;    
+
+//     .left-panel {
+//       float: left;
+
+//       min-width: 50%;
+//       max-width: 65%;
+
+//       background: pink;
+//     }
+
+//     .right-panel {
+//       float: left;
+
+//       min-width: 35%;
+//       max-width: 50%;
+
+//       background: palegreen;
+//     }
+
+//     .footer-buttons {
+//       margin: 10px;
+//       background: blue;
+
+//       ul {
+//         background: orange;
+//       }
+//     }
+
+//     // Footer copyright.
+//     .copyright {
+//       font-weight: $weight-heavy;
+//     }
+
+//     ul {
+//       list-style-type: none;
+//       margin: 0;
+//       padding: 0;
+//     }
+//   }
+// }
