@@ -4,7 +4,9 @@
           transition: padding-top .3s ease-in-out;
 
   max-width: $max-width;
-  padding-top: 2.7em; // From top of page to first post extract.
+
+  // From top of page to first post extract.
+  padding-top: 2.7em;
   padding-left: $edge-padding;
   padding-right: $edge-padding;
   margin-left: auto;
@@ -36,7 +38,8 @@
   footer {
     width: 100%;
     margin: 0 auto;
-    font-size: .45em;
+    font-size: 0.4em;
+    font-weight: $weight-medium;
     display: flex;
     flex-direction: row;
 
@@ -65,11 +68,9 @@
 
       a {
         width: 100%;
-        padding: $button-padding;
+        padding: .4em;
         padding-left: $edge-padding;
         padding-right: $edge-padding;
-        font-size: .85em;
-        font-weight: $weight-bold;
         color: white;
         background: $red;
         display: inline-block;
