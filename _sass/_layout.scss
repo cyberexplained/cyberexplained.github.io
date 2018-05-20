@@ -80,13 +80,20 @@
       // Show the copyright notice under the footer buttons.
       flex-flow: column-reverse;
 
+      .copyright {
+        // Center copyright on smaller screens.
+        text-align: center;
+      }
+
       .left-panel {
         -webkit-transition: margin-top .3s ease-in-out;
            -moz-transition: margin-top .3s ease-in-out;
                 transition: margin-top .3s ease-in-out;
         
         width: 100%;
-        margin-top: 1.5em; // Effected by column reverse.
+
+        // Effected by column reverse.
+        margin-top: 1.5em;
       }
 
       .right-panel {
