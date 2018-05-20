@@ -4,14 +4,15 @@
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: $weight-heavy;
-  line-height: 1.25;
+  font-weight: $weight-medium;
+  line-height: 1.5;
   color: $gray-5;
   text-rendering: optimizeLegibility;
 }
 
 h1 {
   font-size: 0.65em;
+  font-weight: $weight-bold;
 }
 
 h2 {

@@ -4,7 +4,6 @@
   top: 0;
   width: 100%;
   background: $body-bg;
-  //border-bottom: .5px solid black;
   border-bottom: 2px solid $red;
   z-index: 1;
 
@@ -15,7 +14,6 @@
 
     padding-top: 1em;
     padding-bottom: 1em;
-    font-weight: 300;
   }
 
   @media screen and (max-width: 44em) {
@@ -28,9 +26,12 @@
 .masthead-title {
   width: 100%;
   margin: 0;
-  color: $text-color;
+  color: $red;
   display: inline-block;
   text-align: center;
+
+  font-weight: $weight-bold;
+  font-size: .65em;
 }
 
 .header-hidden-on-scroll {

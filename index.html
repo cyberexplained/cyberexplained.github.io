@@ -7,18 +7,18 @@ title:        Home
   <article class="post">
     <div class="post-heading">
       <h2>
-          <a href="{{ post.url | absolute_url }}" class="post-heading">
-            {{ post.heading }}
-          </a>
-        </h2>
-    </div>  
+        <a href="{{ post.url | absolute_url }}" class="post-heading">{{ post.heading }}</a>
+      </h2>
+    </div>
+    <div class="post-tags">
+      <span>cyber101, cyber-hygene</span>
+    </div>
     <div class="post-extract">
       {{ post.extract }}
     </div>
     <div class="post-footer">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-      <span>&nbsp;</span>
-      <a href="{{ post.url | absolute_url }}">READ MORE</a>
+      <a href="{{ post.url | absolute_url }}">CONTINUE READING</a>
     </div>
   </article>
 {% endfor %}

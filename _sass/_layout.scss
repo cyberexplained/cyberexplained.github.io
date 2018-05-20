@@ -27,7 +27,6 @@
   width: 100%;
   max-width: $max-width;
   line-height: 1.5;
-  font-weight: $weight-light;
   margin: 0 auto;
   padding-top: .5em;
   padding-bottom: 1.5em;
@@ -38,7 +37,6 @@
     width: 100%;
     margin: 0 auto;
     font-size: .45em;
-
     display: flex;
     flex-direction: row;
 
@@ -54,27 +52,43 @@
     }
 
     .footer-buttons {
+      // Link animations.
+      -webkit-transition: all .6s ease-in-out;
+         -moz-transition: all .6s ease-in-out;
+              transition: all .6s ease-in-out;
+
       ul li {
+        // Space below each button.
         margin: 0;
-        margin-bottom: .45em;
-        padding: .42em;
-        padding-left: .85em;
-        background: $red;
-        border: 2px solid $red;
-        border-radius: 4px;
+        margin-bottom: .25em;
       }
 
-      ul a {
+      a {
+        width: 100%;
+        padding: $button-padding;
+        padding-left: $edge-padding;
+        padding-right: $edge-padding;
         font-size: .85em;
-        font-weight: $weight-heavy;
+        font-weight: $weight-bold;
         color: white;
-        opacity: .85;
+        background: $red;
+        display: inline-block;
+        border: 2px solid $red;
+        border-radius: 4px;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $red;
+          background: white;
+        }
       }
     }
 
     // Footer copyright.
     .copyright {
-      font-weight: $weight-heavy;
+      color: $red;
+      font-weight: $weight-semi-bold;
     }
 
     ul {
