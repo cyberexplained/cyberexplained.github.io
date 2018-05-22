@@ -1,9 +1,22 @@
+$body-text-font-size: .6em;
+$body-text-font-weight: $weight-regular;
+
 .page,
 .post {
-  // Space between posts.
+}
+
+a,
+time {
+  // Prevent link text splitting.
+  white-space: nowrap;
+}
+
+/* Post teaser is the extracts visible on the main page. */
+.post-teaser {
+  // Space between teasers.
   margin-bottom: 1.6em;
 
-  .post-heading {
+  .teaser-heading {
     font-size: 1.1em;
 
     h2 {
@@ -12,7 +25,16 @@
     }
   }
 
-  .post-tags {
+  // For date format in main post.
+  .teaser-sub-heading {
+    font-size: .4em;
+
+    time {
+      color: $red;
+    }
+  }
+
+  .teaser-tags {
     margin: 0;
     margin-top: .1em;
     padding: 0;
@@ -21,32 +43,15 @@
     color: $red;
   }
 
-  .post-extract {
-    font-size: 0.6em;
-    font-weight: $weight-regular;
+  .teaser-extract {
+    font-size: $body-text-font-size;
+    font-weight: $body-text-font-weight;
     margin: 0;
-    margin-top: 1em;
-    margin-bottom: 1.8em;
+    margin-top: .8em;
+    margin-bottom: 1.2em;
   }
 
-  // .post-content {
-  //   background-color: purple;
-  // //   font-family: $post-content-font-family;
-  //   font-weight: 200;
-  //   padding-top: .5em;
-  //   padding-bottom: 0;
-  //   display: none;
-
-  //   // Posts will be wrapped in <p> by default which will add padding/margin so clear.
-  //   p {
-  //     color: white;
-  //     margin: 100;
-  //     padding: 100;
-  //     padding-bottom: .85em;
-  //   }
-  //}
-
-  .post-footer {
+  .teaser-footer {
     font-size: 0.4em;
     font-weight: $weight-medium;
     display: flex;
@@ -68,13 +73,12 @@
 
     a {
       // Link animations.
-      -webkit-transition: all .6s ease-in-out;
-         -moz-transition: all .6s ease-in-out;
-              transition: all .6s ease-in-out;
+      -webkit-transition: all .3s ease-in-out;
+         -moz-transition: all .3s ease-in-out;
+           -o-transition: all .3s ease-in-out;
+              transition: all .3s ease-in-out;
 
       margin: 0;
-      
-      // Border width * 2 + 1;
       margin-left: -5px;
       padding: .4em;
       padding-left: $edge-padding;
@@ -84,9 +88,6 @@
       border: 2px solid $red;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
-
-      // Prevent link text splitting.
-      white-space: nowrap;
 
       &:hover,
       &:focus {
@@ -106,6 +107,68 @@
   }
 }
 
+/* The main post. */
+.post-full {
+  font-size: $large-font-size;
+
+  .post-heading {
+    -webkit-transition: font-size .3s ease-in-out;
+       -moz-transition: font-size .3s ease-in-out;
+         -o-transition: font-size .3s ease-in-out;
+            transition: font-size .3s ease-in-out;
+
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-weight: $weight-regular;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .post-sub-heading {
+    font-size: .6em;
+    font-weight: $weight-medium;
+    margin-bottom: 1em;
+    color: $red;
+
+    a {
+      color: $red;
+    }
+  }
+
+  .post-content {
+    font-size: $body-text-font-size;
+    font-weight: $body-text-font-weight;
+
+  }
+
+  @media screen and (max-width: 44em) {
+    .post-heading {
+      font-size: 1.5em;
+    }
+
+    // .post-sub-heading {
+    //   time,
+    //   span,
+    //   a {
+    //     font-size: .5em;
+    //   }
+
+    //   // span {
+    //   //   font-size: .5em;
+    //   // }
+
+    //   // a {
+    //   //   font-size: .5em;
+    //   // }
+    // }
+  }
+}
+
+/*
 // Blog post or page title
 .page-title,
 .post-title,
@@ -114,7 +177,7 @@
 }
 .page-title,
 .post-title {
-  margin-top: 0;
+  margin: 0;
 }
 
 // Related posts.
@@ -140,4 +203,4 @@
       color: #999;
     }
   }
-}
+}*/

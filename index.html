@@ -2,21 +2,21 @@
 layout:       default
 title:        Home
 ---
-<div class="posts">
+<div>
 {% for post in paginator.posts %}
-  <article class="post">
-    <div class="post-heading">
+  <article class="post-teaser">
+    <div class="teaser-heading">
       <h2>
-        <a href="{{ post.url | absolute_url }}" class="post-heading">{{ post.heading }}</a>
+        <a href="{{ post.url | absolute_url }}" class="teaser-heading">{{ post.title }}</a>
       </h2>
     </div>
-    <div class="post-tags">
+    <div class="teaser-tags">
       <span>cyber101, cyber-hygene</span>
     </div>
-    <div class="post-extract">
+    <div class="teaser-extract">
       {{ post.extract }}
     </div>
-    <div class="post-footer">
+    <div class="teaser-footer">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
       <a href="{{ post.url | absolute_url }}">CONTINUE READING</a>
     </div>

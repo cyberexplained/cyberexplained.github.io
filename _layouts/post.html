@@ -1,8 +1,15 @@
 ---
 layout: default
 ---
-<article class="post">
-  <h2 class="post-title">{{ page.title }}</h2>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-  {{ content }}
+<article class="post-full">
+  <div class="post-heading">
+    <h2>{{ page.title }}</h2>
+  </div>
+  <div class="post-sub-heading">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+    <span>Posted in <a href="#">cyber101</a>, <a href="#">cyber-safety</a>, <a href="#">another-tag</a></span>
+  </div>
+  <div class="post-content">
+    {{ content }}
+  </div>
 </article>

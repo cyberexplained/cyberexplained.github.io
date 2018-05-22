@@ -1,8 +1,8 @@
 .masthead {
+  width: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
   background: $body-bg;
   border-bottom: 2px solid $red;
   z-index: 1;
@@ -10,10 +10,15 @@
   h1 {
     -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
 
     padding-top: 1em;
     padding-bottom: 1em;
+  }
+
+  h1 > a {
+    
   }
 
   @media screen and (max-width: 44em) {
@@ -24,13 +29,16 @@
 }
 
 .masthead-title {
-  width: 100%;
+  //width: 100%;
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: $edge-padding;
   padding-right: $edge-padding;
   color: $red;
   background: $body-bg;
-  display: inline-block;
+  //display: inline-block;
+  display: block;
   text-align: center;
 
   font-weight: $weight-bold;
