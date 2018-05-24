@@ -13,7 +13,7 @@ time {
 /* Post teaser is the extracts visible on the main page. */
 .post-teaser {
   // Space between teasers.
-  margin-bottom: 1.5em;
+  margin-bottom: 1.75em;
 
   .teaser-heading {
     font-size: 1.3em;
@@ -150,6 +150,8 @@ time {
 
   .post-content {
     width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
     font-size: $body-text-font-size;
     font-weight: $body-text-font-weight;
   }
@@ -195,13 +197,13 @@ time {
     }
 
     .post-content {
-      padding-top: 1em;
-      padding-bottom: 0em;
+      margin-top: 1em;
+      margin-bottom: 0em;
     }
 
     .post-related-articles {
       margin-top: 0em;
-      margin-bottom: 1.5em;
+      margin-bottom: .5em;
     }
   }
 }
