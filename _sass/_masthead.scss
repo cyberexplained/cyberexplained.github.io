@@ -8,20 +8,25 @@
   z-index: 1;
 
   h1 {
-    -webkit-transition: all .3s ease-in-out;
-       -moz-transition: all .3s ease-in-out;
-         -o-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    -webkit-transition: all $transition-duration ease-in-out;
+       -moz-transition: all $transition-duration ease-in-out;
+         -o-transition: all $transition-duration ease-in-out;
+            transition: all $transition-duration ease-in-out;
 
     padding-top: 1em;
     padding-bottom: 1em;
   }
 
   h1 > a {
-    
+    color: $red;
+
+    &:focus,
+    &:hover {
+      font-size: 1.05em;
+    }
   }
 
-  @media screen and (max-width: 44em) {
+  @media screen and (max-width: $small-screen-width) {
     h1 {
       font-size: .55em;
     }
@@ -46,11 +51,19 @@
 }
 
 .header-hidden-on-scroll {
-  transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity $transition-duration ease-in-out;
+     -moz-transition: opacity $transition-duration ease-in-out;
+       -o-transition: opacity $transition-duration ease-in-out;
+          transition: opacity $transition-duration ease-in-out;
+
   opacity: 0;
 }
 
 .header-visible-on-scroll {
-  transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity $transition-duration ease-in-out;
+     -moz-transition: opacity $transition-duration ease-in-out;
+       -o-transition: opacity $transition-duration ease-in-out;
+          transition: opacity $transition-duration ease-in-out;
+
   opacity: 1;
 }

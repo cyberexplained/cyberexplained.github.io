@@ -1,14 +1,13 @@
 .container {
-  -webkit-transition: padding-top .3s ease-in-out;
-     -moz-transition: padding-top .3s ease-in-out;
-          transition: padding-top .3s ease-in-out;
+  -webkit-transition: all $transition-duration ease-in-out;
+     -moz-transition: all $transition-duration ease-in-out;
+       -o-transition: all $transition-duration ease-in-out;
+          transition: all $transition-duration ease-in-out;
 
-  max-width: $max-width;
+  width: 100%;
 
   // From top of page to first post extract.
   padding-top: 2.7em;
-  padding-left: $edge-padding;
-  padding-right: $edge-padding;
   margin-left: auto;
   margin-right: auto;
 
@@ -16,24 +15,33 @@
   height: 100%;
   flex-grow: 1;
 
-  @media screen and (max-width: 44em) {
-    -webkit-transition: padding-top .3s ease-in-out;
-       -moz-transition: padding-top .3s ease-in-out;
-            transition: padding-top .3s ease-in-out;
+  main {
+    padding-left: $edge-padding-normal;
+    padding-right: $edge-padding-normal;
+  }
+
+  @media screen and (max-width: $small-screen-width) {
+    -webkit-transition: all $transition-duration ease-in-out;
+       -moz-transition: all $transition-duration ease-in-out;
+         -o-transition: all $transition-duration ease-in-out;
+            transition: all $transition-duration ease-in-out;
 
     padding-top: 2em;
+
+    main {
+      padding-left: $edge-padding-narrow;
+      padding-right: $edge-padding-narrow;
+    }
   }
 }
 
 .footer-container {
   width: 100%;
-  max-width: $max-width;
   line-height: 1.5;
   margin: 0 auto;
-  padding-top: .5em;
   padding-bottom: 1.5em;
-  padding-left: $edge-padding;
-  padding-right: $edge-padding;
+  padding-left: $edge-padding-normal;
+  padding-right: $edge-padding-normal;
 
   footer {
     width: 100%;
@@ -56,9 +64,10 @@
 
     .footer-buttons {
       // Link animations.
-      -webkit-transition: all .3s ease-in-out;
-         -moz-transition: all .3s ease-in-out;
-              transition: all .3s ease-in-out;
+      -webkit-transition: all $transition-duration ease-in-out;
+         -moz-transition: all $transition-duration ease-in-out;
+           -o-transition: all $transition-duration ease-in-out;
+              transition: all $transition-duration ease-in-out;
 
       ul li {
         // Space below each button.
@@ -79,6 +88,7 @@
 
         &:hover,
         &:focus {
+          font-weight: $weight-medium;
           text-decoration: none;
           color: $red;
           background: white;
@@ -99,7 +109,7 @@
     }
 
     // Convert footer panels to column for smaller screens.
-    @media screen and (max-width: 35em) {
+    @media screen and (max-width: $small-screen-width) {
       flex-direction: column;
 
       // Show the copyright notice under the footer buttons.
@@ -111,9 +121,10 @@
       }
 
       .left-panel {
-        -webkit-transition: margin-top .3s ease-in-out;
-           -moz-transition: margin-top .3s ease-in-out;
-                transition: margin-top .3s ease-in-out;
+        -webkit-transition: margin-top $transition-duration ease-in-out;
+           -moz-transition: margin-top $transition-duration ease-in-out;
+             -o-transition: margin-top $transition-duration ease-in-out;
+                transition: margin-top $transition-duration ease-in-out;
         
         width: 100%;
 
@@ -125,6 +136,11 @@
         width: 100%;
         padding-left: 0;
       }
-    } 
+    }
+  }
+
+  @media screen and (max-width: $small-screen-width) {
+    padding-left: $edge-padding-narrow;
+    padding-right: $edge-padding-narrow;
   }
 }

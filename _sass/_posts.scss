@@ -7,17 +7,16 @@ $body-text-font-weight: $weight-regular;
 
 a,
 time {
-  // Prevent link text splitting.
-  white-space: nowrap;
+  white-space: normal;
 }
 
 /* Post teaser is the extracts visible on the main page. */
 .post-teaser {
   // Space between teasers.
-  margin-bottom: 1.6em;
+  margin-bottom: 1.5em;
 
   .teaser-heading {
-    font-size: 1.1em;
+    font-size: 1.3em;
 
     h2 {
       margin: 0;
@@ -68,15 +67,15 @@ time {
       color: $red;
 
       // Prevent date collapsing when screen width reduces.
-      white-space: nowrap;
+      white-space: normal; //nowrap;
     }
 
     a {
       // Link animations.
-      -webkit-transition: all .3s ease-in-out;
-         -moz-transition: all .3s ease-in-out;
-           -o-transition: all .3s ease-in-out;
-              transition: all .3s ease-in-out;
+      -webkit-transition: all $transition-duration ease-in-out;
+         -moz-transition: all $transition-duration ease-in-out;
+           -o-transition: all $transition-duration ease-in-out;
+              transition: all $transition-duration ease-in-out;
 
       margin: 0;
       margin-left: -5px;
@@ -91,6 +90,7 @@ time {
 
       &:hover,
       &:focus {
+        font-weight: $weight-medium;
         text-decoration: none;
         color: $red;
         background: white;
@@ -105,21 +105,31 @@ time {
   li + li {
     margin-top: .25rem;
   }
+
+  @media screen and (max-width: $small-screen-width) {
+    .teaser-heading {
+      font-size: 1.1em;
+    }
+    
+  }
 }
 
+/******************/
 /* The main post. */
+/******************/
 .post-full {
+  margin: 0;
+  padding: 0;
   font-size: $large-font-size;
+  line-height: .85em;
 
   .post-heading {
-    -webkit-transition: font-size .3s ease-in-out;
-       -moz-transition: font-size .3s ease-in-out;
-         -o-transition: font-size .3s ease-in-out;
-            transition: font-size .3s ease-in-out;
+    -webkit-transition: font-size $transition-duration ease-in-out;
+       -moz-transition: font-size $transition-duration ease-in-out;
+         -o-transition: font-size $transition-duration ease-in-out;
+            transition: font-size $transition-duration ease-in-out;
 
-    margin: 0;
-    padding: 0;
-    font-size: 2em;
+    font-size: 1.85em;
     font-weight: $weight-regular;
 
     h2 {
@@ -131,7 +141,6 @@ time {
   .post-sub-heading {
     font-size: .6em;
     font-weight: $weight-medium;
-    margin-bottom: 1em;
     color: $red;
 
     a {
@@ -140,67 +149,59 @@ time {
   }
 
   .post-content {
+    width: 100%;
     font-size: $body-text-font-size;
     font-weight: $body-text-font-weight;
-
   }
 
-  @media screen and (max-width: 44em) {
+  .post-related-articles {
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: .6em;
+    font-weight: $weight-medium;
+    border: 2px solid $red;
+    border-radius: 4px;
+
+    div {
+      margin: 0;
+      padding: .4em .8em;
+      font-size: .7em;
+      font-weight: $weight-medium;
+      color: white;
+      background: $red;
+    }
+
+    ul {
+      margin: 0;
+      padding: .6em 1em;
+      padding-bottom: 1.5em;
+      list-style-position: inside;
+    }
+
+    li {
+      list-style: none;
+      margin-top: .5em;
+    }
+  }
+
+  @media screen and (max-width: $small-screen-width) {
     .post-heading {
       font-size: 1.5em;
     }
 
-    // .post-sub-heading {
-    //   time,
-    //   span,
-    //   a {
-    //     font-size: .5em;
-    //   }
+    .post-sub-heading {
+      font-size: .5em;
+    }
 
-    //   // span {
-    //   //   font-size: .5em;
-    //   // }
+    .post-content {
+      padding-top: 1em;
+      padding-bottom: 0em;
+    }
 
-    //   // a {
-    //   //   font-size: .5em;
-    //   // }
-    // }
-  }
-}
-
-/*
-// Blog post or page title
-.page-title,
-.post-title,
-.post-title a {
-  color: $gray-5;
-}
-.page-title,
-.post-title {
-  margin: 0;
-}
-
-// Related posts.
-.related {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-.related-posts {
-  padding-left: 0;
-  list-style: none;
-
-  h3 {
-    margin-top: 0;
-  }
-
-  li {
-    small {
-      font-size: 75%;
-      color: #999;
+    .post-related-articles {
+      margin-top: 0em;
+      margin-bottom: 1.5em;
     }
   }
-}*/
+}
