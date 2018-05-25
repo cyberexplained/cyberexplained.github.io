@@ -111,7 +111,7 @@ footer {
 
   // Convert footer panels to column for smaller screens.
   @media screen and (max-width: $small-screen-width) {
-    padding: 0 $edge-padding-narrow 1em;
+    padding: 0 $edge-padding-narrow 2em;
 
     flex-direction: column;
 
