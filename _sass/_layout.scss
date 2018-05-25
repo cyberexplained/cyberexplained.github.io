@@ -111,10 +111,12 @@ footer {
 
   // Convert footer panels to column for smaller screens.
   @media screen and (max-width: $small-screen-width) {
-   flex-direction: column;
+    padding: 0 $edge-padding-narrow 2em;
 
-   // Show the copyright notice under the footer buttons.
-   flex-flow: column-reverse;
+    flex-direction: column;
+
+    // Show the copyright notice under the footer buttons.
+    flex-flow: column-reverse;
 
     .copyright {
       // Center copyright on smaller screens.
