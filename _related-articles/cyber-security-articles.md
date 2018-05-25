@@ -1,6 +1,6 @@
 ---
-layout:       post
+layout:       related
 permalink:    cyber-security-articles.html
 title:        Cyber Security Related Articles
+tag:          cyber-security
 ---
-Articles related to cyber security tag.

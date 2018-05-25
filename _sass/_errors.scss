@@ -1,7 +1,21 @@
+$top-bottom-padding: 5em;
+
 .error-page {
+  -webkit-transition: all $transition-duration ease-in-out;
+     -moz-transition: all $transition-duration ease-in-out;
+       -o-transition: all $transition-duration ease-in-out;
+          transition: all $transition-duration ease-in-out;
+
+  padding: $top-bottom-padding $edge-padding-normal $top-bottom-padding $edge-padding-normal;  
+  font-size: 1.5em;
+  font-weight: $weight-semi-bold;
+  color: $red;
   text-align: center;
 }
 
-.error-page-title {
-  color: $red;
+@media screen and (max-width: $small-screen-width) {
+  .error-page {
+    padding: $top-bottom-padding $edge-padding-narrow $top-bottom-padding $edge-padding-narrow;
+    font-size: 1em;
+  }
 }

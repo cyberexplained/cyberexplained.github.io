@@ -6,14 +6,12 @@ layout: default
     <h2>{{ page.title }}</h2>
   </div>
   <div class="post-sub-heading">
-    {% assign tags_string = "" %}
-    {% for tag in page.tags %}
-      {% assign tags_string = tags_string | append: '<a href="#">' %}
-      {% assign tags_string = tags_string | append: tag %}
-      {% assign tags_string = tags_string | append: '</a>, ' %}
-    {% endfor %}
-    {% assign tags_string = tags_string | append: ' ' %}
-    <span>{{ tags_string | replace: ',  ' }}</span>
+      {% assign tags_string = "" %}
+      {% for tag in page.tags %}
+        {% include tag.html %}
+      {% endfor %}
+      {% assign tags_string = tags_string | append: ' ' %}
+      <span>{{ tags_string | replace: ',  ' }}</span>
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
   </div>
   <div class="post-content">

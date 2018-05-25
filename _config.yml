@@ -1,18 +1,15 @@
 # Permalinks
 permalink:          pretty
 
+# Includes
+include:            ["_related-articles"]
+
 # Setup
 title:              Cyber Explained
 tagline:            cyberexplained.github.io
 url:                https://cyberexplained.github.io
 paginate:           1000000000000
 
-# Navigation
-#pages_list:
-#  Disclaimer:       '/disclaimer'
-
-# Assets
-#
 # We specify the directory for Jekyll so we can use @imports.
 sass:
   sass_dir:         _sass
@@ -23,11 +20,6 @@ author:
   name:             cyberexplained
   url:              https://cyberexplained.github.io
   email:            
-
-# Pages for tags for use when creating links.
-tag_pages:
-  cyber101:         cyber101-articles.html
-  cyber-security:   cyber-security-articles.html
 
 # Gems
 plugins:
