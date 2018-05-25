@@ -58,15 +58,17 @@
 
     <script>
       var macIntel = function() {
-        alert("mac");
+        var footer = $(".footer-container");
+        if (footer != null) { 
+          footer.css("position", "absolute");
+          footer.css("bottom", "0");
+        }
       }
 
       var iPhone = function() {
-        alert("i phone");
       }
 
       var iPad = function() {
-        alert("i pad");
       }
 
       switch (navigator.platform) {
