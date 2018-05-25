@@ -57,9 +57,31 @@
     </script>
 
     <script>
-      alert(navigator.platform);
+      var macIntel = function() {
+        alert("mac");
+      }
 
-      // MacIntel
+      var iPhone = function() {
+        alert("i phone");
+      }
+
+      var iPad = function() {
+        alert("i pad");
+      }
+
+      switch (navigator.platform) {
+        case "MacIntel":
+          macIntel();
+          break;
+
+        case "iPhone":
+          iPhone();
+          break;
+        
+        case "iPad":
+          iPad();
+          break;
+      }
     </script>
     <!-- <script>
       // This doesn't work for narrow screen when the media query runs.
