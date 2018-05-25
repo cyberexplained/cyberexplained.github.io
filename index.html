@@ -11,7 +11,14 @@ title:        Home
       </h2>
     </div>
     <div class="teaser-tags">
-      <span>cyber101, cyber-hygene</span>
+      {% assign tags_string = "" %}
+      {% for tag in post.tags %}
+        {% assign tags_string = tags_string | append: '<a href="#">' %}
+        {% assign tags_string = tags_string | append: tag %}
+        {% assign tags_string = tags_string | append: '</a>, ' %}
+      {% endfor %}
+      {% assign tags_string = tags_string | append: ' ' %}
+      <span>{{ tags_string | replace: ',  ' }}</span>
     </div>
     <div class="teaser-extract">
       {{ post.extract }}

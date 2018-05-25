@@ -24,6 +24,11 @@ author:
   url:              https://cyberexplained.github.io
   email:            
 
+# Pages for tags for use when creating links.
+tag_pages:
+  cyber101:         cyber101-articles.html
+  cyber-security:   cyber-security-articles.html
+
 # Gems
 plugins:
   - jekyll-paginate

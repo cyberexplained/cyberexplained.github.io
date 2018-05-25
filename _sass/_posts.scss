@@ -13,7 +13,7 @@ time {
 /* Post teaser is the extracts visible on the main page. */
 .post-teaser {
   // Space between teasers.
-  margin-bottom: 1.75em;
+  margin-bottom: 1.5em;
 
   .teaser-heading {
     font-size: 1.3em;
@@ -30,7 +30,10 @@ time {
     padding: 0;
     font-size: .6em;
     font-weight: $weight-semi-bold;
-    color: $red;
+
+    span, a {
+      color: $red;
+    }
   }
 
   .teaser-extract {
@@ -97,20 +100,6 @@ time {
   li + li {
     margin-top: .25rem;
   }
-
-  @media screen and (max-width: $small-screen-width) {
-    .teaser-heading {
-      font-size: 1.1em;
-    }
-    
-    .teaser-tags {
-      font-size: .5em;
-    }
-
-    .teaser-footer {
-      font-size: .45em;
-    }
-  }
 }
 
 /******************/
@@ -128,7 +117,7 @@ time {
          -o-transition: font-size $transition-duration ease-in-out;
             transition: font-size $transition-duration ease-in-out;
 
-    font-size: 1.85em;
+    font-size: 1.7em;
     font-weight: $weight-regular;
 
     h2 {
@@ -142,11 +131,20 @@ time {
     font-weight: $weight-medium;
     color: $red;
 
-    time,
     span {
       font-weight: $weight-semi-bold;
-
       display: block;
+    }
+
+    time {
+      -webkit-transition: font-size $transition-duration ease-in-out;
+         -moz-transition: font-size $transition-duration ease-in-out;
+           -o-transition: font-size $transition-duration ease-in-out;
+              transition: font-size $transition-duration ease-in-out;
+      
+      font-weight: $weight-semi-bold;
+      display: block;
+      margin-top: .2em;
     }
 
     a {
@@ -193,14 +191,36 @@ time {
     color: white;
     background: $red;
   }
+}
 
-  @media screen and (max-width: $small-screen-width) {
+@media screen and (max-width: $small-screen-width) {
+  .post-teaser {
+    margin-bottom: 1em;
+    
+    .teaser-heading {
+      font-size: 1.1em;
+    }
+    
+    .teaser-tags {
+      font-size: .5em;
+    }
+  
+    .teaser-footer {
+      font-size: .4em;
+    }
+  }
+
+  .post-full {
     .post-heading {
       font-size: 1.5em;
     }
 
     .post-sub-heading {
       font-size: .5em;
+
+      time {
+        margin-top: 0;
+      }
     }
 
     .post-content {
