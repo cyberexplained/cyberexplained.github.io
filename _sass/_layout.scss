@@ -40,8 +40,8 @@ footer {
   margin: 0 auto;
   font-size: 0.4em;
   font-weight: $weight-medium;
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
 
   .left-panel {
     float: left;
@@ -57,8 +57,8 @@ footer {
   .footer-buttons {
     // Link animations.
     -webkit-transition: all $transition-duration ease-in-out;
-        -moz-transition: all $transition-duration ease-in-out;
-          -o-transition: all $transition-duration ease-in-out;
+       -moz-transition: all $transition-duration ease-in-out;
+         -o-transition: all $transition-duration ease-in-out;
             transition: all $transition-duration ease-in-out;
 
     ul li {
@@ -107,10 +107,10 @@ footer {
 
   // Convert footer panels to column for smaller screens.
   @media screen and (max-width: $small-screen-width) {
-    flex-direction: column;
+//    flex-direction: column;
 
     // Show the copyright notice under the footer buttons.
-    flex-flow: column-reverse;
+//    flex-flow: column-reverse;
 
     .copyright {
       // Center copyright on smaller screens.
@@ -119,8 +119,8 @@ footer {
 
     .left-panel {
       -webkit-transition: margin-top $transition-duration ease-in-out;
-          -moz-transition: margin-top $transition-duration ease-in-out;
-            -o-transition: margin-top $transition-duration ease-in-out;
+         -moz-transition: margin-top $transition-duration ease-in-out;
+           -o-transition: margin-top $transition-duration ease-in-out;
               transition: margin-top $transition-duration ease-in-out;
       
       width: 100%;
