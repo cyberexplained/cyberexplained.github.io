@@ -40,8 +40,8 @@ footer {
   margin: 0 auto;
   font-size: 0.4em;
   font-weight: $weight-medium;
-  // display: flex;
-  // flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
   padding: 0em $edge-padding-normal 5.5em;
   // padding-left: $edge-padding-normal;
@@ -111,10 +111,10 @@ footer {
 
   // Convert footer panels to column for smaller screens.
   @media screen and (max-width: $small-screen-width) {
-//    flex-direction: column;
+   flex-direction: column;
 
-    // Show the copyright notice under the footer buttons.
-//    flex-flow: column-reverse;
+   // Show the copyright notice under the footer buttons.
+   flex-flow: column-reverse;
 
     .copyright {
       // Center copyright on smaller screens.
