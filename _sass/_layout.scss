@@ -43,6 +43,10 @@ footer {
   // display: flex;
   // flex-direction: row;
 
+  padding: 0em $edge-padding-normal 5.5em;
+  // padding-left: $edge-padding-normal;
+  // padding-right: $edge-padding-normal;
+
   .left-panel {
     float: left;
     width: 50%;
@@ -253,3 +257,7 @@ footer {
 //     padding-right: $edge-padding-narrow;
 //   }
 // }
+
+.bottom-margin {
+  margin-bottom: 1.5em;
+}
