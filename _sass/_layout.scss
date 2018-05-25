@@ -36,16 +36,17 @@
 }
 
 .footer-container {
-  // position: fixed;
-  // bottom: 0;
+
 
   width: 100%;
   line-height: 1.5;
   margin: 0 auto;
-  margin-top: .5em;
+  //margin-top: 5em;
   padding-bottom: 1.5em;
   padding-left: $edge-padding-normal;
   padding-right: $edge-padding-normal;
+
+  padding-top: 5em;
 
   footer {
     width: 100%;
