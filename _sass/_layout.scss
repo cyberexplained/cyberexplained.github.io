@@ -35,122 +35,221 @@
   }
 }
 
-.footer-container {
-
-
+footer {
   width: 100%;
-  line-height: 1.5;
   margin: 0 auto;
-  //margin-top: 5em;
-  padding-bottom: 1.5em;
-  padding-left: $edge-padding-normal;
-  padding-right: $edge-padding-normal;
+  font-size: 0.4em;
+  font-weight: $weight-medium;
+  display: flex;
+  flex-direction: row;
 
-  padding-top: 5em;
+  .left-panel {
+    float: left;
+    width: 50%;
+  }
 
-  footer {
-    width: 100%;
-    margin: 0 auto;
-    font-size: 0.4em;
-    font-weight: $weight-medium;
-    display: flex;
-    flex-direction: row;
+  .right-panel {
+    float: left;
+    width: 50%;
+    padding-left: 5em;
+  }
+
+  .footer-buttons {
+    // Link animations.
+    -webkit-transition: all $transition-duration ease-in-out;
+        -moz-transition: all $transition-duration ease-in-out;
+          -o-transition: all $transition-duration ease-in-out;
+            transition: all $transition-duration ease-in-out;
+
+    ul li {
+      // Space below each button.
+      margin: 0;
+      margin-bottom: .25em;
+    }
+
+    a {
+      width: 100%;
+      padding: .4em;
+      padding-left: $edge-padding;
+      padding-right: $edge-padding;
+      color: white;
+      background: $red;
+      display: inline-block;
+      border: 2px solid $red;
+      border-radius: 4px;
+
+      &:hover,
+      &:focus {
+        font-weight: $weight-medium;
+        text-decoration: none;
+        color: $red;
+        background: white;
+      }
+    }
+  }
+
+  // Footer copyright.
+  .copyright {
+    color: $red;
+    font-weight: $weight-semi-bold;
+  }
+
+  .legal {
+    color: $red;
+    font-weight: $weight-semi-bold;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Convert footer panels to column for smaller screens.
+  @media screen and (max-width: $small-screen-width) {
+    flex-direction: column;
+
+    // Show the copyright notice under the footer buttons.
+    flex-flow: column-reverse;
+
+    .copyright {
+      // Center copyright on smaller screens.
+      text-align: center;
+    }
 
     .left-panel {
-      float: left;
-      width: 50%;
+      -webkit-transition: margin-top $transition-duration ease-in-out;
+          -moz-transition: margin-top $transition-duration ease-in-out;
+            -o-transition: margin-top $transition-duration ease-in-out;
+              transition: margin-top $transition-duration ease-in-out;
+      
+      width: 100%;
+
+      // Effected by column reverse.
+      margin-top: 1.5em;
     }
 
     .right-panel {
-      float: left;
-      width: 50%;
-      padding-left: 5em;
+      width: 100%;
+      padding-left: 0;
     }
-
-    .footer-buttons {
-      // Link animations.
-      -webkit-transition: all $transition-duration ease-in-out;
-         -moz-transition: all $transition-duration ease-in-out;
-           -o-transition: all $transition-duration ease-in-out;
-              transition: all $transition-duration ease-in-out;
-
-      ul li {
-        // Space below each button.
-        margin: 0;
-        margin-bottom: .25em;
-      }
-
-      a {
-        width: 100%;
-        padding: .4em;
-        padding-left: $edge-padding;
-        padding-right: $edge-padding;
-        color: white;
-        background: $red;
-        display: inline-block;
-        border: 2px solid $red;
-        border-radius: 4px;
-
-        &:hover,
-        &:focus {
-          font-weight: $weight-medium;
-          text-decoration: none;
-          color: $red;
-          background: white;
-        }
-      }
-    }
-
-    // Footer copyright.
-    .copyright {
-      color: $red;
-      font-weight: $weight-semi-bold;
-    }
-
-    .legal {
-      color: $red;
-      font-weight: $weight-semi-bold;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    // Convert footer panels to column for smaller screens.
-    @media screen and (max-width: $small-screen-width) {
-      flex-direction: column;
-
-      // Show the copyright notice under the footer buttons.
-      flex-flow: column-reverse;
-
-      .copyright {
-        // Center copyright on smaller screens.
-        text-align: center;
-      }
-
-      .left-panel {
-        -webkit-transition: margin-top $transition-duration ease-in-out;
-           -moz-transition: margin-top $transition-duration ease-in-out;
-             -o-transition: margin-top $transition-duration ease-in-out;
-                transition: margin-top $transition-duration ease-in-out;
-        
-        width: 100%;
-
-        // Effected by column reverse.
-        margin-top: 1.5em;
-      }
-
-      .right-panel {
-        width: 100%;
-        padding-left: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width: $small-screen-width) {
-    padding-left: $edge-padding-narrow;
-    padding-right: $edge-padding-narrow;
   }
 }
+
+// .footer-container {
+//   width: 100%;
+//   line-height: 1.5;
+//   margin: 0 auto;
+//   //margin-top: 5em;
+//   padding-bottom: 1.5em;
+//   padding-left: $edge-padding-normal;
+//   padding-right: $edge-padding-normal;
+
+//   padding-top: 5em;
+
+//   footer {
+//     width: 100%;
+//     margin: 0 auto;
+//     font-size: 0.4em;
+//     font-weight: $weight-medium;
+//     display: flex;
+//     flex-direction: row;
+
+//     .left-panel {
+//       float: left;
+//       width: 50%;
+//     }
+
+//     .right-panel {
+//       float: left;
+//       width: 50%;
+//       padding-left: 5em;
+//     }
+
+//     .footer-buttons {
+//       // Link animations.
+//       -webkit-transition: all $transition-duration ease-in-out;
+//          -moz-transition: all $transition-duration ease-in-out;
+//            -o-transition: all $transition-duration ease-in-out;
+//               transition: all $transition-duration ease-in-out;
+
+//       ul li {
+//         // Space below each button.
+//         margin: 0;
+//         margin-bottom: .25em;
+//       }
+
+//       a {
+//         width: 100%;
+//         padding: .4em;
+//         padding-left: $edge-padding;
+//         padding-right: $edge-padding;
+//         color: white;
+//         background: $red;
+//         display: inline-block;
+//         border: 2px solid $red;
+//         border-radius: 4px;
+
+//         &:hover,
+//         &:focus {
+//           font-weight: $weight-medium;
+//           text-decoration: none;
+//           color: $red;
+//           background: white;
+//         }
+//       }
+//     }
+
+//     // Footer copyright.
+//     .copyright {
+//       color: $red;
+//       font-weight: $weight-semi-bold;
+//     }
+
+//     .legal {
+//       color: $red;
+//       font-weight: $weight-semi-bold;
+//     }
+
+//     ul {
+//       list-style-type: none;
+//       margin: 0;
+//       padding: 0;
+//     }
+
+//     // Convert footer panels to column for smaller screens.
+//     @media screen and (max-width: $small-screen-width) {
+//       flex-direction: column;
+
+//       // Show the copyright notice under the footer buttons.
+//       flex-flow: column-reverse;
+
+//       .copyright {
+//         // Center copyright on smaller screens.
+//         text-align: center;
+//       }
+
+//       .left-panel {
+//         -webkit-transition: margin-top $transition-duration ease-in-out;
+//            -moz-transition: margin-top $transition-duration ease-in-out;
+//              -o-transition: margin-top $transition-duration ease-in-out;
+//                 transition: margin-top $transition-duration ease-in-out;
+        
+//         width: 100%;
+
+//         // Effected by column reverse.
+//         margin-top: 1.5em;
+//       }
+
+//       .right-panel {
+//         width: 100%;
+//         padding-left: 0;
+//       }
+//     }
+//   }
+
+//   @media screen and (max-width: $small-screen-width) {
+//     padding-left: $edge-padding-narrow;
+//     padding-right: $edge-padding-narrow;
+//   }
+// }
