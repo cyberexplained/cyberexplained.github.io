@@ -203,6 +203,10 @@ time {
     
     .teaser-tags {
       font-size: .5em;
+
+      // Add some white space to make tapping links
+      // easier on small screens.
+      margin-top: 1em;
     }
   
     .teaser-footer {
