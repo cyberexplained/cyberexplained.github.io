@@ -56,32 +56,38 @@
     </script>
 
     <script>
-      var macIntel = function() {
+      // var macIntel = function() {
+      // }
+
+      // var iPhone = function() {
+      // }
+
+      // var iPad = function() {
+      //   var footer = $(".footer-container");
+      //   if (footer != null) { 
+      //     footer.css("position", "absolute");
+      //     footer.css("bottom", "0");
+      //   }
+      // }
+
+      function isSmartphone() {
+        // Move the teaser tags so they are easier to tap
+        // on handsets.
+        $("teaser-tags").css("margin-top", "1em");
       }
 
-      var iPhone = function() {
-      }
-
-      var iPad = function() {
-        var footer = $(".footer-container");
-        if (footer != null) { 
-          footer.css("position", "absolute");
-          footer.css("bottom", "0");
+      var platform = navigator.platform;
+      if (platform != null) {
+        switch (platform.toLowerCase()) {
+          case "iphone":
+          case "ipod":
+          case "android":
+          case "blackberry":
+            isSmartphone();
+            break;
+          
+          default: break;
         }
-      }
-
-      switch (navigator.platform) {
-        case "MacIntel":
-          macIntel();
-          break;
-
-        case "iPhone":
-          iPhone();
-          break;
-        
-        case "iPad":
-          iPad();
-          break;
       }
     </script>
 

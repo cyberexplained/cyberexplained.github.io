@@ -194,6 +194,11 @@ time {
 }
 
 @media screen and (max-width: $small-screen-width) {
+  -webkit-transition: all $transition-duration ease-in-out;
+     -moz-transition: all $transition-duration ease-in-out;
+       -o-transition: all $transition-duration ease-in-out;
+          transition: all $transition-duration ease-in-out;
+
   .post-teaser {
     margin-bottom: 1em;
     
@@ -206,7 +211,7 @@ time {
 
       // Add some white space to make tapping links
       // easier on small screens.
-      margin-top: 1em;
+      //margin-top: 1em;
     }
   
     .teaser-footer {
