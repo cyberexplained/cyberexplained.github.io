@@ -13,7 +13,9 @@
 
   // Footer specific.
   height: 100%;
-  flex-grow: 1;
+
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
 
   main {
     padding-left: $edge-padding-normal;
