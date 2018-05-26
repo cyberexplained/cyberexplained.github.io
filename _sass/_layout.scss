@@ -24,7 +24,7 @@
 footer {
   width: 100%;
   margin: 0 auto;
-  padding: 0em $edge-padding-normal 5.5em;
+  padding: 0em $edge-padding-normal 2.5em;
   font-size: 0.55em;
   font-weight: $weight-medium;
   display: flex;
@@ -110,7 +110,7 @@ footer {
   }
 
   footer {
-    padding: 0 $edge-padding-narrow 2em;
+    padding: 0 $edge-padding-narrow 1.75em;
 
     flex-direction: column;
 

@@ -1,12 +1,18 @@
-$top-bottom-padding: 5em;
+.error-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
 
 .error-page {
-  -webkit-transition: all $transition-duration ease-in-out;
-     -moz-transition: all $transition-duration ease-in-out;
-       -o-transition: all $transition-duration ease-in-out;
-          transition: all $transition-duration ease-in-out;
+  -webkit-transition: font-size $transition-duration ease-in-out;
+     -moz-transition: font-size $transition-duration ease-in-out;
+       -o-transition: font-size $transition-duration ease-in-out;
+          transition: font-size $transition-duration ease-in-out;
 
-  padding: $top-bottom-padding $edge-padding-normal $top-bottom-padding $edge-padding-normal;  
   font-size: 1.5em;
   font-weight: $weight-semi-bold;
   color: $red;
@@ -15,7 +21,6 @@ $top-bottom-padding: 5em;
 
 @media screen and (max-width: $small-screen-width) {
   .error-page {
-    padding: $top-bottom-padding $edge-padding-narrow $top-bottom-padding $edge-padding-narrow;
-    font-size: 1em;
-  }
+    font-size: 1.1em;
+  } 
 }
