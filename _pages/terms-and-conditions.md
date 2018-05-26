@@ -1,9 +1,9 @@
 ---
 layout:     page
 title:      Terms of Use
-permalink:  terms-of-use.html
+permalink:  terms-and-conditions.html
 ---
 ## Terms of Use
-Terms of use.
+Terms and conditions.
 
 **Use entirely at your own risk.**

@@ -10,6 +10,9 @@
         <h1 class="masthead-title"><a href="{{ site.url }}/">CYBER EXPLAINED</a></h1>
       </header>
 
+      <!-- EU Cookie Consent Warning -->
+      {% include cookie-consent.html %}
+
       <!-- Content  -->
       <main>
         {{ content }}
@@ -55,21 +58,7 @@
     </script>
 
     <script>
-      // var macIntel = function() {
-      // }
-
-      // var iPhone = function() {
-      // }
-
-      // var iPad = function() {
-      //   var footer = $(".footer-container");
-      //   if (footer != null) { 
-      //     footer.css("position", "absolute");
-      //     footer.css("bottom", "0");
-      //   }
-      // }
-
-      function isSmartphone() {
+      var isSmartphone = function() {
         // Move the teaser tags so they are easier to tap
         // on handsets.
         $(".teaser-tags").css("margin-top", "1em");
@@ -88,6 +77,28 @@
           default: break;
         }
       }
+    </script>
+
+    <script>
+      var onCookieConsent = function() {
+        $(".cookie-consent-message").hide();
+      }
+
+      var setCookie = function() {
+
+      }
+
+      var getCookie = function(named) {
+
+      }
+
+      var locateCookieMessage = function() {
+        // var top = $("header").position() + $("header").outerHeight(true);
+        // $(".cookie-consent-message").css("top", top);
+      }
+
+      $().ready(locateCookieMessage);
+      $().scroll(locateCookieMessage);
     </script>
 
     {% if site.analytics_id %}

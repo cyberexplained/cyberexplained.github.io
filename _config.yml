@@ -2,7 +2,7 @@
 permalink:          pretty
 
 # Includes
-include:            ["_related-articles"]
+include:            ["_pages", "_related-articles"]
 
 # Setup
 title:              Cyber Explained

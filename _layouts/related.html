@@ -1,6 +1,42 @@
 ---
 layout: default
 ---
-<div class="related-articles">
-  <div>{{ page.tag }}</div>
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% capture related_list %}
+  {%- for post in sorted_posts -%}
+    {%- if post.tags contains page.tag -%}
+      {{ post.url | absolute_url }}|{{ post.title }}|{{ post.date | date_to_xmlschema }}|{{ post.date | date_to_string }}|{{ post.extract }}
+      {%- if forloop.last == false -%}
+        ::
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{% endcapture %}
+{% assign posts_array = related_list | split: '::' %}
+<div>
+  <div class="related-articles-heading">Showing all articles posted in {{ page.tag }}.</div>
+{%- for item in posts_array -%}
+  {% assign post_items = item | split: '|' %}
+  {% assign post_abs_url = post_items[0] %}
+  {% assign post_title = post_items[1] %}
+  {% assign post_xml_date = post_items[2] %}
+  {% assign post_str_date = post_items[3] %}
+  {% assign post_extract = post_items[4] %}
+  {%- if post_abs_url != blank and post_title != null -%}
+  <article class="post-teaser">
+    <div class="teaser-heading">
+      <h2>
+        <a href="{{ post_abs_url }}" class="teaser-heading">{{ post_title }}</a>
+      </h2>
+    </div>
+    <div class="teaser-extract">
+      {{ post_extract }}
+    </div>
+    <div class="teaser-footer">
+      <time datetime="{{ post_xml_date }}">{{ post_str_date }}</time>
+      <a href="{{ post_abs_url }}">CONTINUE READING</a>
+    </div>
+  </article>
+  {%- endif -%}
+{%- endfor -%}
 </div>

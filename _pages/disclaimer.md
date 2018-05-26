@@ -1,7 +1,7 @@
 ---
 layout:     page
 title:      Disclaimer
-permalink:  disclaimer
+permalink:  disclaimer.html
 ---
 ## Disclaimer
 No responsibility nor liability is accepted or assumed for the completeness, accuracy or reliability of the information contained on this site.

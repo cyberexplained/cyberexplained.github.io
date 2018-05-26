@@ -7,7 +7,8 @@
   width: 100%;
 
   // From top of page to first post extract.
-  padding-top: 2.7em;
+  // This will effect the cookie consent message hugging the header.
+  padding-top: 2.5em;
   margin-left: auto;
   margin-right: auto;
 
@@ -101,7 +102,7 @@ footer {
       -o-transition: all $transition-duration ease-in-out;
          transition: all $transition-duration ease-in-out;
 
-    padding-top: 2em;
+   // padding-top: 2em;
 
     main {
       padding-left: $edge-padding-narrow;

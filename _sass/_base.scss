@@ -22,6 +22,10 @@ html {
   line-height: 1.25;
 }
 
+header {
+  background: yellow;
+}
+
 body {
   color: $body-color;
   background-color: $body-bg;
@@ -32,8 +36,6 @@ body {
 }
 
 main {
-  z-index: 2;
-
   // Spacing from top of page to first item.
   // Compensates for height of header.
   margin-top: 1em;
