@@ -5,7 +5,7 @@
 
   <body>
     <div class="cookie-consent-message-overlay">
-        {% include cookie-consent.html %}
+      {% include cookie-consent.html %}
     </div>
 
     <div class="container">
@@ -52,9 +52,11 @@
     <script>
       $(window).scroll(function() {
         if($(window).scrollTop() > 100) {
-          $(".cookie-consent-message-overlay").css("opacity", "1");
-        } else {
-          $(".cookie-consent-message-overlay").css("opacity", "0");
+          $(".cookie-consent-message-overlay").addClass("cookie-consent-message-overlay-visible");
+        }
+        
+        if($(window).scrollTop() === 0) {
+          $(".cookie-consent-message-overlay").removeClass("cookie-consent-message-overlay-visible");
         }
 
         // if($(window).scrollTop() > 40) {
