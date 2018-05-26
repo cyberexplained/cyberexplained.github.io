@@ -60,14 +60,6 @@
           $(".cookie-consent-message-overlay").addClass("cookie-consent-message-overlay-hidden");
           $(".cookie-consent-message-overlay").removeClass("cookie-consent-message-overlay-visible");
         }
-
-        // if($(window).scrollTop() > 40) {
-        //   $("header").removeClass("header-visible-on-scroll");
-        //   $("header").addClass("header-hidden-on-scroll");
-        // } else {
-        //   $("header").addClass("header-visible-on-scroll");
-        //   $("header").removeClass("header-hidden-on-scroll");
-        // }
       });
     </script>
 
@@ -75,6 +67,8 @@
       var smartphone = function() {
         // Disable animations.
         $("body").addClass("no-animation");
+
+        alert(333);
 
         // Move items to make them easier to tap on handsets.
         var teaserTags = $(".teaser-tags");
