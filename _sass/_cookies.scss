@@ -38,5 +38,6 @@
 @media screen and (max-width: $small-screen-width) {
   .cookie-consent-message {
     padding: 1em $edge-padding-narrow;
+    font-weight: $weight-regular;
   }
 }
