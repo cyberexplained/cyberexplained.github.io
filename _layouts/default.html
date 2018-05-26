@@ -52,10 +52,12 @@
     <script>
       $(window).scroll(function() {
         if($(window).scrollTop() > 100) {
+          $(".cookie-consent-message-overlay").removeClass("cookie-consent-message-overlay-hidden");
           $(".cookie-consent-message-overlay").addClass("cookie-consent-message-overlay-visible");
         }
         
-        if($(window).scrollTop() === 0) {
+        if($(window).scrollTop() <= 20) {
+          $(".cookie-consent-message-overlay").addClass("cookie-consent-message-overlay-hidden");
           $(".cookie-consent-message-overlay").removeClass("cookie-consent-message-overlay-visible");
         }
 
