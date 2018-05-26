@@ -7,6 +7,7 @@
   background: $red;
   text-align: center;
   line-height: 1.7em;
+  z-index: 100;
 
   // Initially show hidden.
   display: none;
@@ -28,6 +29,7 @@
   left: 0;
   width: 100%;
   opacity: 0;
+  z-index: 100;
 }
 
 .cookie-consent-message-overlay-visible {

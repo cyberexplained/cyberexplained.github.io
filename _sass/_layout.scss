@@ -25,7 +25,7 @@
 footer {
   width: 100%;
   margin: 0 auto;
-  padding: 0em $edge-padding-normal 2.5em;
+  padding: 0 $edge-padding-normal 2.5em;
   font-size: 0.55em;
   font-weight: $weight-medium;
   display: flex;
@@ -98,9 +98,9 @@ footer {
 @media screen and (max-width: $small-screen-width) {
   .container {
     -webkit-transition: all $transition-duration ease-in-out;
-    -moz-transition: all $transition-duration ease-in-out;
-      -o-transition: all $transition-duration ease-in-out;
-         transition: all $transition-duration ease-in-out;
+       -moz-transition: all $transition-duration ease-in-out;
+         -o-transition: all $transition-duration ease-in-out;
+            transition: all $transition-duration ease-in-out;
 
    // padding-top: 2em;
 
@@ -125,8 +125,8 @@ footer {
 
     .left-panel {
       -webkit-transition: margin-top $transition-duration ease-in-out;
-        -moz-transition: margin-top $transition-duration ease-in-out;
-          -o-transition: margin-top $transition-duration ease-in-out;
+         -moz-transition: margin-top $transition-duration ease-in-out;
+           -o-transition: margin-top $transition-duration ease-in-out;
               transition: margin-top $transition-duration ease-in-out;
       
       width: 100%;

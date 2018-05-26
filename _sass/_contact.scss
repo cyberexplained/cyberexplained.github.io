@@ -1,0 +1,105 @@
+.form-container {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 3em 0;
+  display: flex;
+  flex-direction: row;
+
+  .form-left-panel,
+  .form-right-panel {
+    -webkit-transition: all $transition-duration ease-in-out;
+       -moz-transition: all $transition-duration ease-in-out;
+         -o-transition: all $transition-duration ease-in-out;
+            transition: all $transition-duration ease-in-out;
+  }
+
+  .form-left-panel {
+    width: 50%;
+    margin-top: .3em;
+    font-size: .65em;
+    font-weight: $weight-regular;
+    float:left;
+    color: black;
+  }
+
+  .form-right-panel {
+    width: 50%;
+    padding-left: 1.3em;
+    font-size: .65em;
+    font-weight: $weight-medium;
+    float:left;
+
+    input, select, textarea, button {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+
+      width: 100%;
+      margin: .2em 0;
+      padding: .4em $edge-padding;
+      font-family: $root-font-family;
+      font-size: .82em;
+      font-weight: $weight-medium;
+      border: 2px solid $red;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 10em;
+    }
+
+    button {
+      font-weight: $weight-semi-bold;
+      color: $red;
+      background: rgba($color: $red, $alpha: .1);
+    }
+
+    ::-webkit-input-placeholder {
+      color: $red;
+      opacity: .5;
+    }
+
+    ::-moz-placeholder {
+      color: $red;
+      opacity: .5;
+    }
+
+    :-moz-placeholder {
+      color: $red;
+      opacity: .5;
+    }
+
+    :-ms-input-placeholder {
+      color: $red;
+      opacity: .5;
+    }
+  }
+}
+
+@media screen and (max-width: $small-screen-width) {
+  .form-container {
+    padding: .5em 0;
+    flex-direction: column;
+
+    .form-left-panel,
+    .form-right-panel {
+      -webkit-transition: all $transition-duration ease-in-out;
+         -moz-transition: all $transition-duration ease-in-out;
+           -o-transition: all $transition-duration ease-in-out;
+              transition: all $transition-duration ease-in-out;
+    }
+
+    .form-left-panel {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    .form-right-panel {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
