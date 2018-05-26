@@ -107,9 +107,9 @@ strong {
   font-weight: $weight-medium;
 }
 
-.no-transition {
-  -webkit-transition: none !important;
-     -moz-transition: none !important;
-       -o-transition: none !important;
-          transition: none !important;
+.no-animation {
+  -webkit-animation-duration: none !important;
+     -moz-animation-duration: none !important;
+       -o-animation-duration: none !important;
+          animation-duration: none !important;
 }
