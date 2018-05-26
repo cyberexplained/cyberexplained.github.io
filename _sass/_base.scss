@@ -108,8 +108,8 @@ strong {
 }
 
 .no-animation {
-  -webkit-animation-duration: none !important;
-     -moz-animation-duration: none !important;
-       -o-animation-duration: none !important;
-          animation-duration: none !important;
+  -webkit-transition-duration: none !important;
+     -moz-transition-duration: none !important;
+       -o-transition-duration: none !important;
+          transition-duration: none !important;
 }
