@@ -84,14 +84,20 @@
           mastheadTitle.addClass("no-transition");
         }
         
-        var teaserHeadings = $(".teaser-heading");
-        if (teaserHeadings) {
-          teaserHeadings.addClass("no-transition");
+        var teaserHeading = $(".teaser-heading");
+        if (teaserHeading) {
+          teaserHeading.addClass("no-transition");
         }
         
         var teaserTags = $(".teaser-tags");
         if (teaserTags) {
           teaserTags.css("margin-top", "1em");
+          teaserTags.addClass("no-transition");
+        }
+
+        var teaserFooter = $(".teaser-footer");
+        if (teaserFooter) {
+          teaserFooter.addClass("no-transition");
         }
 
         alert(555);
