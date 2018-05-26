@@ -26,6 +26,14 @@
   opacity: 0;
 }
 
+.cookie-consent-message-overlay-hidden {
+  opacity: 0;
+}
+
+.cookie-consent-message-overlay-visible {
+  opacity: 1;
+}
+
 @media screen and (max-width: $small-screen-width) {
   .cookie-consent-message {
     padding: 1em $edge-padding-narrow;
