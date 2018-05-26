@@ -74,8 +74,10 @@
     <script>
       var isSmartphone = function() {
         // Move items to make them easier to tap on handsets.
-        $(".teaser-tags").css("margin-top", "1em");
-        $(".cookie-consent-message").css("line-height", "1.25em");
+        var teaserTags = $(".teaser-tags");
+        if (teaserTags) {
+          teaserTags.css("margin-top", "1em");
+        }
       }
 
       var platform = navigator.platform;

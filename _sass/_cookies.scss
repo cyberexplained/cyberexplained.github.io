@@ -6,6 +6,7 @@
   color: white;
   background: $red;
   text-align: center;
+  line-height: 1.7em;
 
   a {
     text-decoration: underline;
@@ -26,12 +27,12 @@
   opacity: 0;
 }
 
-.cookie-consent-message-overlay-hidden {
-  opacity: 0;
-}
-
 .cookie-consent-message-overlay-visible {
   opacity: 1;
+}
+
+.cookie-consent-message-overlay-hidden {
+  opacity: 0;
 }
 
 @media screen and (max-width: $small-screen-width) {
