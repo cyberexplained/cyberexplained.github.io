@@ -73,34 +73,14 @@
 
     <script>
       var smartphone = function() {
-        // Move items to make them easier to tap on handsets.
-        var masthead = $(".masthead");
-        if (masthead) {
-          masthead.addClass("no-transition");
-        }
+        // Disable animations.
+        $("body").addClass("no-transition");
 
-        var mastheadTitle = $(".masthead-title");
-        if (mastheadTitle) {
-          mastheadTitle.addClass("no-transition");
-        }
-        
-        var teaserHeading = $(".teaser-heading");
-        if (teaserHeading) {
-          teaserHeading.addClass("no-transition");
-        }
-        
+        // Move items to make them easier to tap on handsets.
         var teaserTags = $(".teaser-tags");
         if (teaserTags) {
           teaserTags.css("margin-top", "1em");
-          teaserTags.addClass("no-transition");
         }
-
-        var teaserFooter = $(".teaser-footer");
-        if (teaserFooter) {
-          teaserFooter.addClass("no-transition");
-        }
-
-        alert(555);
       }
 
       var platform = navigator.platform;
