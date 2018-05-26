@@ -4,6 +4,10 @@
   {% include head.html %}
 
   <body>
+    <div class="cookie-consent-message-overlay">
+        {% include cookie-consent.html %}
+    </div>
+
     <div class="container">
       <!-- EU Cookie Consent Warning -->
       {% include cookie-consent.html %}
@@ -47,19 +51,19 @@
 
     <script>
       $(window).scroll(function() {
-        if($(window).scrollTop() > 0) {
-          $(".cookie-consent-message").addClass("cookie-consent-message-pinned");
+        if($(window).scrollTop() > 100) {
+          $(".cookie-consent-message-overlay").css("opacity", "1");
         } else {
-          $(".cookie-consent-message").removeClass("cookie-consent-message-pinned");
+          $(".cookie-consent-message-overlay").css("opacity", "0");
         }
 
-        if($(window).scrollTop() > 40) {
-          $("header").removeClass("header-visible-on-scroll");
-          $("header").addClass("header-hidden-on-scroll");
-        } else {
-          $("header").addClass("header-visible-on-scroll");
-          $("header").removeClass("header-hidden-on-scroll");
-        }
+        // if($(window).scrollTop() > 40) {
+        //   $("header").removeClass("header-visible-on-scroll");
+        //   $("header").addClass("header-hidden-on-scroll");
+        // } else {
+        //   $("header").addClass("header-visible-on-scroll");
+        //   $("header").removeClass("header-hidden-on-scroll");
+        // }
       });
     </script>
 
