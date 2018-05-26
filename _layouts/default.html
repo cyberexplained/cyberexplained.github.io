@@ -5,13 +5,13 @@
 
   <body>
     <div class="container">
+      <!-- EU Cookie Consent Warning -->
+      {% include cookie-consent.html %}
+
       <!-- Header -->
       <header class="masthead">
         <h1 class="masthead-title"><a href="{{ site.url }}/">CYBER EXPLAINED</a></h1>
       </header>
-
-      <!-- EU Cookie Consent Warning -->
-      {% include cookie-consent.html %}
 
       <!-- Content  -->
       <main>
@@ -47,7 +47,13 @@
 
     <script>
       $(window).scroll(function() {
-        if($(window).scrollTop() > 10) {
+        if($(window).scrollTop() > 0) {
+          $(".cookie-consent-message").addClass("cookie-consent-message-pinned");
+        } else {
+          $(".cookie-consent-message").removeClass("cookie-consent-message-pinned");
+        }
+
+        if($(window).scrollTop() > 40) {
           $("header").removeClass("header-visible-on-scroll");
           $("header").addClass("header-hidden-on-scroll");
         } else {

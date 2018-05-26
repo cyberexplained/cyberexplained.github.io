@@ -1,8 +1,8 @@
 .masthead {
   width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
+  // position: fixed;
+  // top: 4em;
+  // left: 0;
   background: $body-bg;
   border-bottom: 2px solid $red;
 
@@ -12,8 +12,7 @@
          -o-transition: all $transition-duration ease-in-out;
             transition: all $transition-duration ease-in-out;
 
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1em 0;
   }
 
   h1 > a {

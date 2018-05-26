@@ -4,15 +4,22 @@
        -o-transition: all $transition-duration ease-in-out;
           transition: all $transition-duration ease-in-out;
 
+  // position: fixed;
+  // top: 0;
+  // left: 0;
   width: 100%;
+
+  // // Height is important for header location.
+  // height: 4em;
+
   padding: 1em $edge-padding-normal;
   font-size: .45em;
-  font-weight: $weight-regular;
+  font-weight: $weight-medium;
   color: white;
   background: $red;
 
   // Used to glue the consent message to bottom of header.
-  margin: -.5em 0 1em 0;
+  //margin: -.5em 0 1em 0;
 
   // Centres cookie consent message in container.
   text-align: center;
@@ -21,6 +28,17 @@
     text-decoration: underline;
     color: white;
   }
+}
+
+.cookie-consent-message-pinned {
+  -webkit-transition: all $transition-duration ease-in-out;
+     -moz-transition: all $transition-duration ease-in-out;
+       -o-transition: all $transition-duration ease-in-out;
+          transition: all $transition-duration ease-in-out;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .cookie-consent-message-hidden {
@@ -33,6 +51,6 @@
     padding: 1em $edge-padding-narrow;
 
     // Used to glue the consent message to bottom of header.
-    margin: -1.1em 0 1em 0;
+    //margin: -1.1em 0 1em 0;
   }
 }
