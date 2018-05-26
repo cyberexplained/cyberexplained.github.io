@@ -14,10 +14,10 @@
 }
 
 .cookie-consent-message-overlay {
-  -webkit-transition: opacity $transition-duration-long ease-in-out;
-     -moz-transition: opacity $transition-duration-long ease-in-out;
-       -o-transition: opacity $transition-duration-long ease-in-out;
-          transition: opacity $transition-duration-long ease-in-out;
+  -webkit-transition: opacity $transition-duration ease-in-out;
+     -moz-transition: opacity $transition-duration ease-in-out;
+       -o-transition: opacity $transition-duration ease-in-out;
+          transition: opacity $transition-duration ease-in-out;
 
   position: fixed;
   top: 0;
