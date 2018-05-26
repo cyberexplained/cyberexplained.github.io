@@ -72,12 +72,29 @@
     </script>
 
     <script>
-      var isSmartphone = function() {
+      var smartphone = function() {
         // Move items to make them easier to tap on handsets.
+        var masthead = $(".masthead");
+        if (masthead) {
+          masthead.addClass("no-transition");
+        }
+
+        var mastheadTitle = $(".masthead-title");
+        if (mastheadTitle) {
+          mastheadTitle.addClass("no-transition");
+        }
+        
+        var teaserHeadings = $(".teaser-heading");
+        if (teaserHeadings) {
+          teaserHeadings.addClass("no-transition");
+        }
+        
         var teaserTags = $(".teaser-tags");
         if (teaserTags) {
           teaserTags.css("margin-top", "1em");
         }
+
+        alert(555);
       }
 
       var platform = navigator.platform;
@@ -87,7 +104,7 @@
           case "ipod":
           case "android":
           case "blackberry":
-            isSmartphone();
+            smartphone();
             break;
           
           default: break;
