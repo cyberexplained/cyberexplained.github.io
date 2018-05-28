@@ -5,9 +5,8 @@
           transition: all $transition-duration ease-in-out;
 
   position: relative;
-  min-height: 100%;
-
   width: 100%;
+  min-height: 100%;
 
   // From top of page to first post extract.
   // This will effect the cookie consent message hugging the header.

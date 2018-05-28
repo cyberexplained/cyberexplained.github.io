@@ -3,8 +3,12 @@
   // position: fixed;
   // top: 4em;
   // left: 0;
+
+//  font-size: 200%;
+
+  color: $primary;
   background: $body-bg;
-  border-bottom: 2px solid $primary;
+  border-bottom: $border-thickness solid $primary;
 
   h1 {
     -webkit-transition: all $transition-duration ease-in-out;
@@ -12,31 +16,23 @@
          -o-transition: all $transition-duration ease-in-out;
             transition: all $transition-duration ease-in-out;
 
-    padding: 1em 0;
+    margin: 0 auto;
+    padding: .5em $edge-padding-normal;
+    color: $primary;
+    background: $body-bg;
+    display: block;
+    text-align: center;
+    font-weight: $weight-medium;
   }
 
-  h1 > a {
+  a {
     color: $primary;
 
     &:focus,
     &:hover {
-      font-size: 1.05em;
+      //font-size: 110%;
     }
   }
-}
-
-.masthead-title {
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $edge-padding-normal;
-  padding-right: -normal;
-  color: $primary;
-  background: $body-bg;
-  display: block;
-  text-align: center;
-  font-weight: $weight-bold;
-  font-size: .65em;
 }
 
 .header-hidden-on-scroll {
@@ -58,9 +54,9 @@
 }
 
 @media screen and (max-width: $small-screen-width) {
-  .masthead {
-    h1 {
-      font-size: .55em;
-    }
-  }
+  // .masthead {
+  //   h1 {
+  //     font-size: .55em;
+  //   }
+  // }
 }

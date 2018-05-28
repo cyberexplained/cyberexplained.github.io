@@ -1,4 +1,8 @@
-// Fonts.
+// Font sizes.
+// Define body text size and work upwards for headings and downwards for small text.
+$root-font-size: 14px;
+
+// Font weight.
 $weight-extra-light: 200;
 $weight-light: 300;
 $weight-regular: 400;
@@ -6,15 +10,18 @@ $weight-medium: 500;
 $weight-semi-bold: 600;
 $weight-bold: 700;
 
-$large-breakpoint: 38em;
-$large-font-size: 26px;
-
 // Small text.
-$small-font-size: .45em;
+$small-font-size: 75%;
 $small-font-weight: $weight-regular;
 $small-text-line-height: 1.7em;
 
+// Line height.
+$line-height-narrow: 1em;
+$line-height-regular: 1.4em;
+$line-height-wide: 1.6em;
+
 // Paddings.
+$button-vertical-padding: 1em;
 $button-edge-padding: 1em;
 $edge-padding-normal: 10%;
 $edge-padding-narrow: 3%;
@@ -30,13 +37,19 @@ $transition-duration-long: 1s;
 $pagination-opacity: .4;
 
 // Posts.
-$post-body-text-font-size: .6em;
+$post-body-text-font-size: 100%;
 $post-body-text-font-weight: $weight-regular;
 
 // Footer.
+$footer-height-row: 4.5em;
+$footer-height-column: 6em;
 $footer-list-item-edge-padding: .4em;
 $footer-vertical-padding-normal: 1.2em;
-$footer-vertical-padding-narrow: .5em;
+$footer-vertical-padding-narrow: 0;
+
+// Borders.
+$border-thickness: 2px;
+$border-corner-radius: 4px;
 
 // Colours.
 $body-bg: white;

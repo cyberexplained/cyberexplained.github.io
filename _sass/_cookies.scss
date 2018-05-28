@@ -3,35 +3,19 @@
   padding: 1em $edge-padding-normal;
   font-size: $small-font-size;
   font-weight: $small-font-weight;
+  line-height: $small-text-line-height;
+  color: $primary-inverted;
   background: $primary;
   text-align: center;
-  line-height: $small-text-line-height;
   
   // Ensure shows topmost.
   z-index: 100;
 
   // Initially show hidden.
   display: none;
-
-  * {
-    color: $primary-inverted;
-  }
-
-  a {
-    &:focus,
-    &:hover {
-      text-decoration: underline;
-      color: $primary-inverted;
-    }
-  }
 }
 
 .cookie-consent-message-overlay {
-  -webkit-transition: opacity $transition-duration-long ease-in-out;
-     -moz-transition: opacity $transition-duration-long ease-in-out;
-       -o-transition: opacity $transition-duration-long ease-in-out;
-          transition: opacity $transition-duration-long ease-in-out;
-
   position: fixed;
   top: 0;
   left: 0;

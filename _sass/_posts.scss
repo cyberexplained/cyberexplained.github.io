@@ -1,83 +1,74 @@
-.page,
-.post {
-}
-
 a,
 time {
   white-space: normal;
+  color: inherit;
+  background: inherit;
 }
 
-/* Post teaser is the extracts visible on the main page. */
+.categories {
+  padding-top: .2em;
+  font-weight: $weight-medium;
+  color: $primary;
+
+  //background: gold;
+}
+
+.page,
+.post-full {
+  h2 {
+    margin: 1.75em 0 .75em;
+  }
+
+  h3 {
+    margin: 1.5em 0 .5em;
+  }
+
+  h4 {
+    margin: 1em 0 .5em;
+  }
+}
+
+/***********************************************************/
+/* Post teasers are the extracts visible on the main page. */
+/***********************************************************/
 .post-teaser {
+  -webkit-transition: all $transition-duration ease-in-out;
+     -moz-transition: all $transition-duration ease-in-out;
+       -o-transition: all $transition-duration ease-in-out;
+          transition: all $transition-duration ease-in-out;
+
   // Space between teasers.
-  margin-bottom: 1.5em;
-
-  .teaser-heading {
-    font-size: 1.3em;
-
-    h2 {
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  .teaser-tags {
-    margin: 0;
-    margin-top: .1em;
-    padding: 0;
-    font-size: .5em;
-    font-weight: $weight-medium;
-
-    span, a {
-      color: $primary;
-    }
-  }
+  margin-bottom: 2.5em;
 
   .teaser-extract {
-    font-size: $post-body-text-font-size;
-    font-weight: $post-body-text-font-weight;
-    margin: 0;
-    margin-top: .8em;
-    margin-bottom: 1.2em;
+    margin: .5em 0 1em;
   }
 
   .teaser-footer {
-    font-size: 0.5em;
-    font-weight: $weight-medium;
+    font-size: $small-font-size;
+    font-weight: $small-font-weight;
     display: flex;
     flex-direction: row;
 
-    time {
-      margin: 0;
-      padding: .4em;
-      padding-left: $button-edge-padding;
-      padding-right: $button-edge-padding;
-      border: 2px solid $primary;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      color: $primary;
+    a,
+    time{
+      padding: .1em $button-edge-padding;
+    }
 
-      // Prevent date collapsing when screen width reduces.
-      white-space: normal; //nowrap;
+    time {
+      border: $border-thickness solid $primary;
+      border-top-left-radius: $border-corner-radius;
+      border-bottom-left-radius: $border-corner-radius;
+      color: $primary;
     }
 
     a {
-      // Link animations.
-      -webkit-transition: all $transition-duration ease-in-out;
-         -moz-transition: all $transition-duration ease-in-out;
-           -o-transition: all $transition-duration ease-in-out;
-              transition: all $transition-duration ease-in-out;
-
-      margin: 0;
       margin-left: -5px;
-      padding: .4em;
-      padding-left: $button-edge-padding;
-      padding-right: $button-edge-padding;
       color: $primary-inverted;
       background: $primary;
-      border: 2px solid $primary;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border: $border-thickness solid $primary;
+      border-top-right-radius: $border-corner-radius;
+      border-bottom-right-radius: $border-corner-radius;
 
       // Reduce weight for balance.
       font-weight: $weight-regular;
@@ -101,33 +92,17 @@ time {
   li + li {
     margin-top: .25rem;
   }
+
+  @media screen and (max-width: $small-screen-width) {
+    margin-bottom: 1.8em;
+  }
 }
 
 /******************/
 /* The main post. */
 /******************/
 .post-full {
-  margin: 0;
-  padding: 0;
-  line-height: .85em;
-
-  .post-heading {
-    -webkit-transition: font-size $transition-duration ease-in-out;
-       -moz-transition: font-size $transition-duration ease-in-out;
-         -o-transition: font-size $transition-duration ease-in-out;
-            transition: font-size $transition-duration ease-in-out;
-
-    font-size: 1.7em;
-    font-weight: $weight-regular;
-
-    h2 {
-      margin: 0;
-      padding: 0;
-    }
-  }
-
   .post-sub-heading {
-    font-size: .6em;
     font-weight: $weight-medium;
     color: $primary;
 
@@ -136,117 +111,51 @@ time {
     }
 
     time {
-      -webkit-transition: font-size $transition-duration ease-in-out;
-         -moz-transition: font-size $transition-duration ease-in-out;
-           -o-transition: font-size $transition-duration ease-in-out;
-              transition: font-size $transition-duration ease-in-out;
-      
       display: block;
-      margin-top: .2em;
-    }
-
-    a {
-      color: $primary;
     }
   }
 
   .post-content {
-    width: 100%;
     margin-top: 2em;
     margin-bottom: 2em;
-    font-size: $post-body-text-font-size;
     font-weight: $post-body-text-font-weight;
   }
 
   .post-related-articles {
     width: 100%;
-    margin: 2em 0 4em 0;
-    border: 2px solid $primary;
-    border-radius: 4px;
+    border: $border-thickness solid $primary;
+    border-radius: $border-corner-radius;
+
+    h2 {
+      margin: 0;
+    }
 
     ul {
       margin: 0;
 
       // Additional padding for top and bottom of list.
       // More padding will be added for the li.
-      padding: .3em 0 .3em 0;
-      font-size: .8em;
+      // This ensures the top and bottom padding matches the padding
+      // between titles.
+      padding: .4em 0;
+
       font-weight: $weight-medium;
       list-style-type: none;
     }
 
     li {
-      // Margin for related article titles.
-      padding: .3em .5em .3em .5em;
+      padding: .4em .5em;
     }
   }
 
   .post-related-articles-heading {
-    margin: 0;
-    padding: .3em $button-edge-padding;
-    font-size: .5em;
+    padding: .3em .6em;
     font-weight: $weight-regular;
     color: $primary-inverted;
     background: $primary;
   }
-}
 
-/***************************/
-/* Related articles pages. */
-/***************************/
-.related-articles-heading {
-  -webkit-transition: font-size $transition-duration ease-in-out;
-     -moz-transition: font-size $transition-duration ease-in-out;
-       -o-transition: font-size $transition-duration ease-in-out;
-          transition: font-size $transition-duration ease-in-out;
-
-  margin: 0;
-  padding: .5em $edge-padding-normal 1.2em;
-  font-size: 1.1em;
-  font-weight: $weight-medium;
-  color: $primary;
-  text-align: center;
-}
-
-@media screen and (max-width: $small-screen-width) {
-  -webkit-transition: all $transition-duration ease-in-out;
-     -moz-transition: all $transition-duration ease-in-out;
-       -o-transition: all $transition-duration ease-in-out;
-          transition: all $transition-duration ease-in-out;
-
-  .post-teaser {
-    margin-bottom: 1em;
-    
-    .teaser-heading {
-      font-size: 1.1em;
-    }
-    
-    .teaser-tags {
-      font-size: .5em;
-
-      // Add some white space to make tapping links
-      // easier on small screens.
-      //margin-top: 1em;
-    }
-  
-    .teaser-footer {
-      font-size: .4em;
-    }
-  }
-
-  .post-full {
-    .post-heading {
-      font-size: 1.5em;
-    }
-
-    .post-sub-heading {
-      font-size: .5em;
-
-      time {
-        margin-top: 0;
-      }
-    }
-
+  @media screen and (max-width: $small-screen-width) {
     .post-content {
       margin-top: 1em;
       margin-bottom: 0em;
@@ -257,20 +166,24 @@ time {
       // smaller screens.
       margin: 0 0 5em 0;
 
-      ul {
-        font-size: .6em;
-      }
-
       li {
         // Margin for related article titles.
-        padding: .2em .6em .2em .6em;
+        padding: .4em .5em;
       }
     }
   }
+}
 
-  // Heading for related articles pages.
-  .related-articles-heading {
+/***************************/
+/* Related articles pages. */
+/***************************/
+.related-articles-heading {
+  padding: 0 $edge-padding-normal;
+  font-weight: $weight-medium;
+  color: $primary;
+  text-align: center;
+
+  @media screen and (max-width: $small-screen-width) {
     padding: .5em $edge-padding-narrow 1em;
-    font-size: .8em;
   }
 }

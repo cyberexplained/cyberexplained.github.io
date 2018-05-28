@@ -5,25 +5,21 @@ title:        Home
 <div>
 {% for post in paginator.posts %}
   <article class="post-teaser">
-    <div class="teaser-heading">
-      <h2>
-        <a href="{{ post.url | absolute_url }}" class="teaser-heading">{{ post.title }}</a>
-      </h2>
-    </div>
-    <div class="teaser-tags">
+    <h1>
+      <a href="{{ post.url | absolute_url }}" class="teaser-heading">{{ post.title }}</a>
+    </h1>
+    <div>
       {% assign tags_string = "" %}
       {% for tag in post.tags %}
         {% include tag.html %}
       {% endfor %}
       {% assign tags_string = tags_string | append: ' ' %}
-      <span>{{ tags_string | replace: ',  ' }}</span>
+      <div class="categories">{{ tags_string | replace: ',  ' }}</div>
     </div>
-    <div class="teaser-extract">
-      {{ post.extract }}
-    </div>
+    <div class="teaser-extract">{{ post.extract }}</div>
     <div class="teaser-footer">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-      <a href="{{ post.url | absolute_url }}">continue reading</a>
+      <a href="{{ post.url | absolute_url }}">READ ARTICLE</a>
     </div>
   </article>
 {% endfor %}

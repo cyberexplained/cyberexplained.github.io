@@ -2,16 +2,14 @@
 layout: default
 ---
 <article class="post-full">
-  <div class="post-heading">
-    <h2>{{ page.title }}</h2>
-  </div>
+  <h1>{{ page.title }}</h1>
   <div class="post-sub-heading">
-      {% assign tags_string = "" %}
-      {% for tag in page.tags %}
-        {% include tag.html %}
-      {% endfor %}
-      {% assign tags_string = tags_string | append: ' ' %}
-      <span>{{ tags_string | replace: ',  ' }}</span>
+    {% assign tags_string = "" %}
+    {% for tag in page.tags %}
+      {% include tag.html %}
+    {% endfor %}
+    {% assign tags_string = tags_string | append: ' ' %}
+    <div class="categories">{{ tags_string | replace: ',  ' }}</div>
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
   </div>
   <div class="post-content">
@@ -25,7 +23,11 @@ layout: default
     {% for related in page.related %}
       {% for post in site.posts %}
         {% if post.title == related %}
-          <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+          <li>
+            <h2>
+              <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+            </h2>
+          </li>
         {% endif %}
       {% endfor %}
     {% endfor %}

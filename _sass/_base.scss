@@ -4,57 +4,69 @@
           box-sizing: border-box;
 }
 
-html,
-body {
+html,body,header,main,footer,article,div,span,a,
+time,h1,h2,h3,h4,h5,h6,img,ul,li,table {
   margin: 0;
   padding: 0;
+}
+
+
+html,
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 html {
-  font-family: $root-font-family;
-  
-  // Small font for smaller screens, media query handles larger font for larger screens.
-  font-size: $large-font-size;
+  font-family: $root-font-family;  
+  font-size: $root-font-size;
   font-weight: $weight-light;
-  line-height: 1.25;
+  line-height: $line-height-regular;
 }
 
 body {
-  background-color: $body-bg;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 
   position: relative;
+  background-color: $body-bg;
 }
 
 main {
-  // Spacing from top of page to first item.
-  // Compensates for height of header.
-  margin-top: 1em;
-  margin-bottom: 4.5em;
+  -webkit-transition: margin $transition-duration ease-in-out;
+     -moz-transition: margin $transition-duration ease-in-out;
+       -o-transition: margin $transition-duration ease-in-out;
+          transition: margin $transition-duration ease-in-out;
+
+  // Spacing from top of page to first item, taking header into account.
+  // Margin-bottom needs to take the fixed footer into account.
+  margin-top: 3em;
+  margin-bottom: 3em + $footer-height-row; 
+
+  @media screen and (max-width: $small-screen-width) {
+    margin-top: 1em;
+    margin-bottom: $footer-height-column;
+  }
+}
+
+p {
+  font-size: $post-body-text-font-size;
+  font-weight: $post-body-text-font-weight;
 }
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  // Link animations.
-  -webkit-transition: all $transition-duration ease-in-out;
-     -moz-transition: all $transition-duration ease-in-out;
-       -o-transition: all $transition-duration ease-in-out;
-          transition: all $transition-duration ease-in-out;
-
-  color: $link-color;
+  color: inherit; // $link-color;
+  background: inherit;
   text-decoration: none;
 
   // `:focus` is linked to `:hover` for basic accessibility
   // Changing the color of the link will override this
-  // &:hover,
-  // &:focus {
-  //   text-decoration: none;
-  //   color: $primary;
-  // }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 
   strong {
     color: inherit;
@@ -97,17 +109,4 @@ tbody tr:nth-child(odd) th {
 
 strong {
   font-weight: $weight-medium;
-}
-
-.no-animation {
-  -webkit-transition: none !important;
-     -moz-transition: none !important;
-       -o-transition: none !important;
-          transition: none !important;
-}
-
-@media screen and (max-width: $small-screen-width) {
-  main {
-    margin-bottom: 5em;
-  }
 }

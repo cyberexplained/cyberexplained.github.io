@@ -3,6 +3,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  height: $footer-height-row;
   margin: 0;
   padding: $footer-vertical-padding-normal $edge-padding-normal;
   font-size: $small-font-size;
@@ -40,8 +41,7 @@ footer {
     }
   
     li {
-      padding-left: $footer-list-item-edge-padding;
-      padding-right: $footer-list-item-edge-padding;
+      padding: 0 $footer-list-item-edge-padding;
       list-style: none;
       display: inline;
     }
@@ -50,6 +50,7 @@ footer {
 
 @media screen and (max-width: $small-screen-width) {
   footer {
+    height: $footer-height-column;
     padding: 0 $edge-padding-narrow;
     flex-direction: column;
     flex-flow: column-reverse;

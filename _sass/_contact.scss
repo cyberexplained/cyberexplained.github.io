@@ -1,6 +1,5 @@
 .form-container {
   width: 100%;
-  margin: 0;
   margin-bottom: 1em;
   padding: 3em 0;
   display: flex;
@@ -49,10 +48,10 @@
       margin: .2em 0;
       padding: .4em $button-edge-padding;
       font-family: $root-font-family;
-      font-size: .82em;
+      font-size: 100%;
       font-weight: $weight-medium;
-      border: 2px solid $primary;
-      border-radius: 4px;
+      border: $border-thickness solid $primary;
+      border-radius: $border-corner-radius;
     }
 
     textarea {
