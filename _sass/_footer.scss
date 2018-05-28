@@ -2,7 +2,6 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-
   width: 100%;
   margin: 0;
   padding: $footer-vertical-padding-normal $edge-padding-normal;
@@ -16,13 +15,14 @@ footer {
     color: $primary-inverted;
   }
 
-  #footer-copyright {
+  .footer-copyright {
     width: 50%;
   }
 
-  #footer-links {
+  .footer-links {
     width: 50%;
     text-align: right;
+    line-height: $small-text-line-height;
 
     a {
       &:focus,
@@ -54,7 +54,7 @@ footer {
     flex-direction: column;
     flex-flow: column-reverse;
 
-    #footer-copyright {
+    .footer-copyright {
       width: 100%;
       text-align: center;
 
@@ -63,7 +63,7 @@ footer {
       padding-bottom: $footer-vertical-padding-normal;
     }
 
-    #footer-links {
+    .footer-links {
       width: 100%;
 
       ul {

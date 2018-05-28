@@ -5,7 +5,7 @@
   font-weight: $small-font-weight;
   background: $primary;
   text-align: center;
-  line-height: 1.7em;
+  line-height: $small-text-line-height;
   
   // Ensure shows topmost.
   z-index: 100;
