@@ -1,13 +1,4 @@
-$body-color: #515151;
-$body-bg: #fff;
-$text-color: #000;
-$link-color: #000;
-
-$border-color: #e5e5e5;
-
-$large-breakpoint: 38em;
-$large-font-size: 26px;
-
+// Fonts.
 $weight-extra-light: 200;
 $weight-light: 300;
 $weight-regular: 400;
@@ -15,31 +6,39 @@ $weight-medium: 500;
 $weight-semi-bold: 600;
 $weight-bold: 700;
 
-$max-width: 40em;
-$edge-padding: 1em;
+$large-breakpoint: 38em;
+$large-font-size: 26px;
+$small-font-size: .45em;
+$small-font-weight: $weight-regular;
 
+// Paddings.
+$button-edge-padding: 1em;
 $edge-padding-normal: 10%;
 $edge-padding-narrow: 3%;
 
+// Media queries.
 $small-screen-width: 44em;
 
+// Animations and transitions.
 $transition-duration: .3s;
 $transition-duration-long: 1s;
 
+// Pagination.
 $pagination-opacity: .4;
 
-$gray-1: #f9f9f9;
-$gray-2: #ccc;
-$gray-3: #767676;
-$gray-4: #515151;
-$gray-5: #313131;
+// Posts.
+$post-body-text-font-size: .6em;
+$post-body-text-font-weight: $weight-regular;
 
-$red: #c62641;
-$orange: #d28445;
-$yellow: #f4bf75;
-$green: #90a959;
-$green-faded: rgba(144, 169, 89, $pagination-opacity);
-$cyan: #75b5aa;
-$blue: #268bd2;
-// $blue: #6a9fb5;
-$brown: #8f5536;
+// Footer.
+$footer-list-item-edge-padding: .4em;
+$footer-vertical-padding-normal: 1.2em;
+$footer-vertical-padding-narrow: .5em;
+
+// Colours.
+$body-bg: white;
+$text-color: Black;
+$link-color: Black; // Used for links in headings.
+$heading-color: #313131;
+$primary:#c62641;
+$primary-inverted: white;

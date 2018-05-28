@@ -1,42 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
   {% include head.html %}
-
   <body onload="javascript:onLoad();">
     <div class="cookie-consent-message-overlay">
       {% include cookie-consent.html %}
     </div>
-
     <div class="container">
-      <!-- EU Cookie Consent Warning -->
       {% include cookie-consent.html %}
-
-      <!-- Header -->
       <header class="masthead">
-        <h1 class="masthead-title"><a href="{{ site.url }}/">CYBER EXPLAINED</a></h1>
+        <h1 class="masthead-title"><a href="{{ site.url }}/">Cyber Explained</a></h1>
       </header>
-
-      <!-- Content  -->
       <main>
         {{ content }}
       </main>
-
-      <!-- Footer -->
       <footer>
-        <div class="left-panel">
-          <div class="copyright">
-            <ul>
-              <li>&copy; CYBER EXPLAINED 2018. ALL RIGHTS RESERVED.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="right-panel footer-buttons">
+        <div id="copyright">&copy; Cyber Explained 2018. All rights reserved.</div>
+        <div id="links">
           <ul>
-            <li><a href="{{ site.url }}/privacy-and-cookies-policy.html" class="footer-link">PRIVACY AND COOKIES</a></li>
-            <li><a href="{{ site.url }}/terms-and-conditions.html" class="footer-link">TERMS AND CONDITIONS</a></li>
-            <li><a href="{{ site.url }}/disclaimer.html" class="footer-link">DISCLAIMER</a></li>
-            <li><a href="{{ site.url }}/contact.html" class="footer-link">GET IN TOUCH</a></li>
+            <li><a href="{{ site.url }}/privacy-and-cookies-policy.html">Privacy and Cookies</a></li>
+            <li><a href="{{ site.url }}/terms-of-use.html">Terms of use</a></li>
+            <li><a href="{{ site.url }}/disclaimer.html">Disclaimer</a></li>
+            <li><a href="{{ site.url }}/contact.html">Contact</a></li>
           </ul>
         </div>
       </footer>

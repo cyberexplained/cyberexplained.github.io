@@ -37,11 +37,11 @@
 
       width: 100%;
       margin: .2em 0;
-      padding: .4em $edge-padding;
+      padding: .4em $button-edge-padding;
       font-family: $root-font-family;
       font-size: .82em;
       font-weight: $weight-medium;
-      border: 2px solid $red;
+      border: 2px solid $primary;
       border-radius: 4px;
     }
 
@@ -51,27 +51,27 @@
 
     button {
       font-weight: $weight-semi-bold;
-      color: $red;
-      background: rgba($color: $red, $alpha: .1);
+      color: $primary;
+      background: rgba($color: $primary, $alpha: .1);
     }
 
     ::-webkit-input-placeholder {
-      color: $red;
+      color: $primary;
       opacity: .5;
     }
 
     ::-moz-placeholder {
-      color: $red;
+      color: $primary;
       opacity: .5;
     }
 
     :-moz-placeholder {
-      color: $red;
+      color: $primary;
       opacity: .5;
     }
 
     :-ms-input-placeholder {
-      color: $red;
+      color: $primary;
       opacity: .5;
     }
   }

@@ -1,20 +1,28 @@
 .cookie-consent-message {
   width: 100%;
   padding: 1em $edge-padding-normal;
-  font-size: .45em;
-  font-weight: $weight-medium;
-  color: white;
-  background: $red;
+  font-size: $small-font-size;
+  font-weight: $small-font-weight;
+  background: $primary;
   text-align: center;
   line-height: 1.7em;
+  
+  // Ensure shows topmost.
   z-index: 100;
 
   // Initially show hidden.
   display: none;
 
+  * {
+    color: $primary-inverted;
+  }
+
   a {
-    text-decoration: underline;
-    color: white;
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+      color: $primary-inverted;
+    }
   }
 }
 

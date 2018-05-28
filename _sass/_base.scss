@@ -22,12 +22,7 @@ html {
   line-height: 1.25;
 }
 
-header {
-  background: yellow;
-}
-
 body {
-  color: $body-color;
   background-color: $body-bg;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -40,10 +35,6 @@ main {
   // Compensates for height of header.
   margin-top: 1em;
 }
-
-// article {
-//   width: 100%;
-// }
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
@@ -58,11 +49,11 @@ a {
 
   // `:focus` is linked to `:hover` for basic accessibility
   // Changing the color of the link will override this
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: $red; // #268bd2;
-  }
+  // &:hover,
+  // &:focus {
+  //   text-decoration: none;
+  //   color: $primary;
+  // }
 
   strong {
     color: inherit;

@@ -4,7 +4,7 @@
   // top: 4em;
   // left: 0;
   background: $body-bg;
-  border-bottom: 2px solid $red;
+  border-bottom: 2px solid $primary;
 
   h1 {
     -webkit-transition: all $transition-duration ease-in-out;
@@ -16,7 +16,7 @@
   }
 
   h1 > a {
-    color: $red;
+    color: $primary;
 
     &:focus,
     &:hover {
@@ -29,9 +29,9 @@
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-left: $edge-padding;
-  padding-right: $edge-padding;
-  color: $red;
+  padding-left: $edge-padding-normal;
+  padding-right: -normal;
+  color: $primary;
   background: $body-bg;
   display: block;
   text-align: center;
