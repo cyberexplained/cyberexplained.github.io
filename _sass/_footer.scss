@@ -16,11 +16,11 @@ footer {
     color: $primary-inverted;
   }
 
-  #copyright {
+  #footer-copyright {
     width: 50%;
   }
 
-  #links {
+  #footer-links {
     width: 50%;
     text-align: right;
 
@@ -54,7 +54,7 @@ footer {
     flex-direction: column;
     flex-flow: column-reverse;
 
-    #copyright {
+    #footer-copyright {
       width: 100%;
       text-align: center;
 
@@ -63,7 +63,7 @@ footer {
       padding-bottom: $footer-vertical-padding-normal;
     }
 
-    #links {
+    #footer-links {
       width: 100%;
 
       ul {
