@@ -21,6 +21,15 @@
     font-weight: $weight-regular;
     float:left;
     color: black;
+
+    a {
+      font-weight: $weight-medium;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .form-right-panel {
