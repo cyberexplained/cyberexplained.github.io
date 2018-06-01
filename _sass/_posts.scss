@@ -32,11 +32,6 @@ time {
 /* Post teasers are the extracts visible on the main page. */
 /***********************************************************/
 .post-teaser {
-  -webkit-transition: all $transition-duration ease-in-out;
-     -moz-transition: all $transition-duration ease-in-out;
-       -o-transition: all $transition-duration ease-in-out;
-          transition: all $transition-duration ease-in-out;
-
   // Space between teasers.
   margin-bottom: 2.5em;
 
@@ -63,6 +58,11 @@ time {
     }
 
     a {
+      -webkit-transition: all $transition-duration ease-in-out;
+         -moz-transition: all $transition-duration ease-in-out;
+           -o-transition: all $transition-duration ease-in-out;
+              transition: all $transition-duration ease-in-out;
+
       margin-left: -5px;
       color: $primary-inverted;
       background: $primary;
